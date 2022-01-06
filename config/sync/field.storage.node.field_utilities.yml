@@ -1,0 +1,20 @@
+uuid: 3249de27-c791-48ae-9902-c47a20aab262
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_utilities
+field_name: field_utilities
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

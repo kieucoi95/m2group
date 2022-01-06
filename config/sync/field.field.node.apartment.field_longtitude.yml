@@ -1,0 +1,23 @@
+uuid: c122f1e4-abf6-486c-b2e8-a0674e01d02b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longtitude
+    - node.type.apartment
+id: node.apartment.field_longtitude
+field_name: field_longtitude
+entity_type: node
+bundle: apartment
+label: 'Kinh độ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

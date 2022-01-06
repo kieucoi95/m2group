@@ -1,17 +1,17 @@
-uuid: 70bf7329-59cc-4e16-8687-a6e58611f2dc
+uuid: d967cf1e-a46a-4a2f-b740-5ba6da97b5fe
 langcode: vi
 status: true
 dependencies:
   config:
-    - field.storage.node.field_nearest_station
+    - field.storage.node.field_address
     - node.type.apartment
   module:
     - text
-id: node.apartment.field_nearest_station
-field_name: field_nearest_station
+id: node.apartment.field_address
+field_name: field_address
 entity_type: node
 bundle: apartment
-label: 'Ga gần nhất'
+label: 'Địa chỉ'
 description: ''
 required: false
 translatable: true

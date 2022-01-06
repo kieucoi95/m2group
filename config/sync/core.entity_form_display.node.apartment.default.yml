@@ -4,16 +4,26 @@ status: true
 dependencies:
   config:
     - field.field.node.apartment.body
+    - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_comment
     - field.field.node.apartment.field_contact
     - field.field.node.apartment.field_district
+    - field.field.node.apartment.field_gallery
+    - field.field.node.apartment.field_latitude
+    - field.field.node.apartment.field_longtitude
     - field.field.node.apartment.field_nearest_station
     - field.field.node.apartment.field_notes
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
     - field.field.node.apartment.field_station
+    - field.field.node.apartment.field_thumbnail
+    - field.field.node.apartment.field_type
+    - field.field.node.apartment.field_utilities
+    - image.style.thumbnail
     - node.type.apartment
   module:
     - field_group
+    - image
     - path
     - text
 third_party_settings:
@@ -37,22 +47,30 @@ third_party_settings:
         width_breakpoint: 640
       label: 'Thông tin căn hộ'
     group_img_overview:
-      children: {  }
+      children:
+        - field_gallery
+        - field_contact
+        - field_notes
       parent_name: group_info_apartment
       weight: 12
       format_type: tab
       region: content
       format_settings:
-        show_empty_fields: false
+        description: ''
+        formatter: closed
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
-        formatter: open
-        required_fields: true
+        show_empty_fields: false
       label: 'Khối hình ảnh'
     group_basic_info:
       children:
         - title
+        - field_type
+        - field_station
+        - field_district
+        - field_price
+        - field_thumbnail
       parent_name: group_info_apartment
       weight: 11
       format_type: tab
@@ -66,7 +84,8 @@ third_party_settings:
         required_fields: true
       label: 'Thông tin cơ bản'
     group_introduce:
-      children: {  }
+      children:
+        - body
       parent_name: group_info_apartment
       weight: 13
       format_type: tab
@@ -80,7 +99,12 @@ third_party_settings:
         show_empty_fields: false
       label: 'Khối mô tả chung'
     group_detail_des:
-      children: {  }
+      children:
+        - field_price_text
+        - field_nearest_station
+        - field_utilities
+        - field_address
+        - field_comment
       parent_name: group_info_apartment
       weight: 14
       format_type: tab
@@ -94,7 +118,9 @@ third_party_settings:
         required_fields: true
       label: 'Khối mô tả chi tiết'
     group_map:
-      children: {  }
+      children:
+        - field_longtitude
+        - field_latitude
       parent_name: group_info_apartment
       weight: 15
       format_type: tab
@@ -128,22 +154,56 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_address:
+    weight: 34
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_comment:
+    weight: 35
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_contact:
-    weight: 28
+    weight: 40
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_district:
-    weight: 27
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_gallery:
+    weight: 39
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_latitude:
+    weight: 37
+    settings:
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: number
+    region: content
+  field_longtitude:
+    weight: 36
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_nearest_station:
     weight: 32
@@ -154,7 +214,7 @@ content:
     type: text_textarea
     region: content
   field_notes:
-    weight: 29
+    weight: 41
     settings:
       size: 60
       placeholder: ''
@@ -162,7 +222,7 @@ content:
     type: string_textfield
     region: content
   field_price:
-    weight: 30
+    weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -177,7 +237,27 @@ content:
     type: text_textarea
     region: content
   field_station:
-    weight: 26
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_thumbnail:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_utilities:
+    weight: 33
     settings:
       match_operator: CONTAINS
       match_limit: 10

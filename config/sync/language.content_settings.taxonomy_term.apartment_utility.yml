@@ -1,0 +1,16 @@
+uuid: f2d8a7dd-724b-4355-b20f-407751eea743
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.apartment_utility
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.apartment_utility
+target_entity_type_id: taxonomy_term
+target_bundle: apartment_utility
+default_langcode: site_default
+language_alterable: false

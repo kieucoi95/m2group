@@ -1,0 +1,21 @@
+uuid: 948e1389-25cc-4a3f-8129-902d3b0de21a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatags
+    - taxonomy.vocabulary.apartment_utility
+  module:
+    - metatag
+id: taxonomy_term.apartment_utility.field_metatags
+field_name: field_metatags
+entity_type: taxonomy_term
+bundle: apartment_utility
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

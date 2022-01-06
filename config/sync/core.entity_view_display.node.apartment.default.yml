@@ -4,15 +4,25 @@ status: true
 dependencies:
   config:
     - field.field.node.apartment.body
+    - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_comment
     - field.field.node.apartment.field_contact
     - field.field.node.apartment.field_district
+    - field.field.node.apartment.field_gallery
+    - field.field.node.apartment.field_latitude
+    - field.field.node.apartment.field_longtitude
     - field.field.node.apartment.field_nearest_station
     - field.field.node.apartment.field_notes
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
     - field.field.node.apartment.field_station
+    - field.field.node.apartment.field_thumbnail
+    - field.field.node.apartment.field_type
+    - field.field.node.apartment.field_utilities
     - node.type.apartment
   module:
+    - image
+    - options
     - text
     - user
 id: node.apartment.default
@@ -26,6 +36,20 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_comment:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_contact:
     weight: 104
@@ -43,6 +67,37 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_gallery:
+    weight: 115
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_latitude:
+    weight: 113
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_longtitude:
+    weight: 112
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
     region: content
   field_nearest_station:
     weight: 108
@@ -79,6 +134,30 @@ content:
     region: content
   field_station:
     weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_thumbnail:
+    weight: 114
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_type:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_utilities:
+    weight: 109
     label: above
     settings:
       link: true

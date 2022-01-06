@@ -1,0 +1,29 @@
+uuid: 2afc6f3f-1bae-40e7-94af-84115036f326
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_utilities
+    - node.type.apartment
+    - taxonomy.vocabulary.apartment_utility
+id: node.apartment.field_utilities
+field_name: field_utilities
+entity_type: node
+bundle: apartment
+label: 'Tiện ích'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      apartment_utility: apartment_utility
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

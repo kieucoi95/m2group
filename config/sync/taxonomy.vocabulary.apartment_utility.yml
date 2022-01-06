@@ -1,0 +1,8 @@
+uuid: 73c87420-4fbd-46ad-a33e-4aecfd7c6fde
+langcode: vi
+status: true
+dependencies: {  }
+name: 'Tiện ích căn hộ'
+vid: apartment_utility
+description: ''
+weight: 0
