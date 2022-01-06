@@ -1,0 +1,11 @@
+global-styling:
+  css:
+    theme:
+      libraries/bootstrap/bootstrap.min.css: {}
+  js:
+    libraries/bootstrap/bootstrap.bundle.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once

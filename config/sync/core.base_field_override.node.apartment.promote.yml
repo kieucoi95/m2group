@@ -1,0 +1,22 @@
+uuid: be7ec94c-a4f9-4aa8-82cb-0a5009ad07b8
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.apartment
+id: node.apartment.promote
+field_name: promote
+entity_type: node
+bundle: apartment
+label: 'Đưa lên trang chủ'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Bật
+  off_label: Tắt
+field_type: boolean

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4ba2a40b10f2a4d15e59287223db7c8",
+    "content-hash": "7d69108de658ae9a4d5737118a85034d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1094,64 +1094,6 @@
             }
         },
         {
-            "name": "drupal/bootstrap",
-            "version": "3.23.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/bootstrap.git",
-                "reference": "8.x-3.23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.23.zip",
-                "reference": "8.x-3.23",
-                "shasum": "9849be667cc678a91ad29f77c2baea2cf16878bc"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.23",
-                    "datestamp": "1592175762",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Carver (markcarver)",
-                    "homepage": "https://www.drupal.org/u/markcarver",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "John McCormick (neardark)",
-                    "homepage": "https://www.drupal.org/u/neardark",
-                    "role": "Co-maintainer"
-                },
-                {
-                    "name": "Fabiano Sant'Ana (wundo)",
-                    "homepage": "https://www.drupal.org/u/wundo",
-                    "role": "Co-maintainer"
-                }
-            ],
-            "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
-            "homepage": "https://www.drupal.org/project/bootstrap",
-            "support": {
-                "source": "https://git.drupalcode.org/project/bootstrap",
-                "docs": "https://drupal-bootstrap.org",
-                "issues": "https://www.drupal.org/project/issues/bootstrap",
-                "irc": "irc://irc.freenode.org/drupal-bootstrap"
-            }
-        },
-        {
             "name": "drupal/console",
             "version": "1.9.8",
             "source": {
@@ -2117,6 +2059,50 @@
             }
         },
         {
+            "name": "drupal/gtranslate",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gtranslate.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gtranslate-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "47ccdc3dee56c99e3481d65342e55e7e2cdfa099"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1613514186",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "edo888",
+                    "homepage": "https://www.drupal.org/user/291183"
+                }
+            ],
+            "description": "Uses Google power to translate your website.",
+            "homepage": "https://www.drupal.org/project/gtranslate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gtranslate"
+            }
+        },
+        {
             "name": "drupal/jquery_ui",
             "version": "1.4.0",
             "source": {
@@ -2700,6 +2686,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/smtp",
                 "issues": "https://www.drupal.org/project/issues/smtp"
+            }
+        },
+        {
+            "name": "drupal/taxonomy_term_depth",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/taxonomy_term_depth.git",
+                "reference": "8.x-2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_term_depth-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "e695c4ab3b0c66f199450136900041ec8522719f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1614604967",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Cadila",
+                    "homepage": "https://www.drupal.org/user/2669241"
+                },
+                {
+                    "name": "miteshmap",
+                    "homepage": "https://www.drupal.org/user/1404966"
+                }
+            ],
+            "description": "Provides field for storing taxonomy depth value and some wrappers integration with modules",
+            "homepage": "http://drupal.org/project/taxonomy_term_depth",
+            "support": {
+                "source": "https://git.drupalcode.org/project/taxonomy_term_depth"
             }
         },
         {

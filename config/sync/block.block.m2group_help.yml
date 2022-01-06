@@ -1,0 +1,22 @@
+uuid: 799d2066-26b1-4b1e-bf45-8bf05ea6656d
+langcode: vi
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - m2group
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: m2group_help
+theme: m2group
+region: header
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

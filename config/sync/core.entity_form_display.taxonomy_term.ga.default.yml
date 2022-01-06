@@ -1,0 +1,35 @@
+uuid: db118dba-ea7d-4083-b12a-2b3afaacb965
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ga.field_metatags
+    - taxonomy.vocabulary.ga
+  module:
+    - metatag
+id: taxonomy_term.ga.default
+targetEntityType: taxonomy_term
+bundle: ga
+mode: default
+content:
+  field_metatags:
+    weight: 1
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  status: true
+  translation: true

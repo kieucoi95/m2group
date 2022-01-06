@@ -1,0 +1,22 @@
+uuid: a1a610ac-53e9-47b2-b01c-a067d5a6ef3d
+langcode: vi
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - m2group
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: m2group_content
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

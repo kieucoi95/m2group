@@ -1,0 +1,27 @@
+uuid: 788b7440-ddf4-4786-a44b-438adabdccf0
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.district.field_metatags
+    - taxonomy.vocabulary.district
+id: taxonomy_term.district.default
+targetEntityType: taxonomy_term
+bundle: district
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_metatags: true
+  langcode: true
+  path: true
+  status: true
+  translation: true

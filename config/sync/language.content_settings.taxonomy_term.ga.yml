@@ -1,0 +1,16 @@
+uuid: 74f5536e-aefb-4c12-89bf-0f92afbc6b08
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ga
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.ga
+target_entity_type_id: taxonomy_term
+target_bundle: ga
+default_langcode: site_default
+language_alterable: false

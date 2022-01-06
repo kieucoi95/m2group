@@ -1,0 +1,27 @@
+uuid: 4faf054a-7c80-4227-836d-c7b5c2fa5ec5
+langcode: vi
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - m2group
+_core:
+  default_config_hash: SrPItPkAevw9hGX_v5AfsVyw6vkoog7ZVLSJYqwsBHc
+id: m2group_tools
+theme: m2group
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

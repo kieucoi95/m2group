@@ -1,0 +1,29 @@
+uuid: ec04986d-157b-43a6-894a-f2f0b1cadb58
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.node.apartment.body
+    - node.type.apartment
+  module:
+    - text
+    - user
+id: node.apartment.default
+targetEntityType: node
+bundle: apartment
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

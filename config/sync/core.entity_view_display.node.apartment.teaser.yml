@@ -1,0 +1,31 @@
+uuid: 893939d8-40b0-45f9-a729-c49e80e1e352
+langcode: vi
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.apartment.body
+    - node.type.apartment
+  module:
+    - text
+    - user
+id: node.apartment.teaser
+targetEntityType: node
+bundle: apartment
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

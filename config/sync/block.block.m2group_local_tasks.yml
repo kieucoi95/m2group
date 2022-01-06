@@ -1,0 +1,22 @@
+uuid: 9443d4b5-7e93-471b-a547-c3b98f8aa9a9
+langcode: vi
+status: true
+dependencies:
+  theme:
+    - m2group
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: m2group_local_tasks
+theme: m2group
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

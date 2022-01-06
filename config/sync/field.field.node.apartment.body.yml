@@ -1,0 +1,23 @@
+uuid: 17d043cf-e35c-4c98-b72d-14bc30267263
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.apartment
+  module:
+    - text
+id: node.apartment.body
+field_name: body
+entity_type: node
+bundle: apartment
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

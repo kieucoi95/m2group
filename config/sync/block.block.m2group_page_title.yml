@@ -1,0 +1,20 @@
+uuid: fe72b9e4-146d-4040-ada5-8023cf10d241
+langcode: vi
+status: true
+dependencies:
+  theme:
+    - m2group
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: m2group_page_title
+theme: m2group
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

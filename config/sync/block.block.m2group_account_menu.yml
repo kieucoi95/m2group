@@ -1,0 +1,27 @@
+uuid: eb4909c7-abd1-48c6-81fc-2e4f9a5fb57f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - m2group
+_core:
+  default_config_hash: HrZTblWpMF4fo6BdbBcyHEu5Hp9ds1IZF3FiRd2Q8rU
+id: m2group_account_menu
+theme: m2group
+region: header
+weight: 11
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }
