@@ -1,0 +1,10 @@
+uuid: 4694cc5c-e7ed-4e5d-9d7d-d12e30a25f18
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
+id: comment
+label: 'Default comments'
+target_entity_type_id: node
+description: 'Allows commenting on content'

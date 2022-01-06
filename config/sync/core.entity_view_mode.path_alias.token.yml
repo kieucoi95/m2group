@@ -1,0 +1,10 @@
+uuid: c3e02204-1f98-41fa-904b-6113e2475f33
+langcode: vi
+status: true
+dependencies:
+  module:
+    - path_alias
+id: path_alias.token
+label: Token
+targetEntityType: path_alias
+cache: true

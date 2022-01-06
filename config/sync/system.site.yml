@@ -1,0 +1,14 @@
+uuid: ce6e322d-5e3c-4b3c-8a3c-d50ccc946f93
+name: m2group
+mail: m2group@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: vi
+default_langcode: vi
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

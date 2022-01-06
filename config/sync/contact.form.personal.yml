@@ -1,0 +1,13 @@
+uuid: 6eb4db9a-c9bf-4a84-a250-8ab8e1d27195
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Trang liên hệ cá nhân'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

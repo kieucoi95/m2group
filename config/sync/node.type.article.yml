@@ -1,0 +1,13 @@
+uuid: 415ea061-fa53-4683-aba4-16276cda587f
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: 'Bài viết'
+type: article
+description: 'Kiểu nội dung <em>bài viết</em> bao gồm các nội dung tin tức, bài blog hay thông tin thường xuyên được cập nhật.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

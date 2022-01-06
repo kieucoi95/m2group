@@ -1,0 +1,8 @@
+uuid: 28adcd16-b2ef-427b-8485-f16e2bbc536c
+langcode: vi
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: 'Mặc định'

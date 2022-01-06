@@ -1,0 +1,13 @@
+uuid: dd47a751-1692-4465-a893-251e486f863f
+langcode: vi
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: lfyE_snmvfg_EQ3VDyhUtGAXgmqtEiqa46I3bTMg8DU
+id: comment_save_action
+label: 'Lưu bình luận'
+type: comment
+plugin: 'entity:save_action:comment'
+configuration: {  }

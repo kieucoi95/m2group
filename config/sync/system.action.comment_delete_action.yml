@@ -1,0 +1,13 @@
+uuid: 1ed5c3bc-ef15-4641-b774-1a35cc298c7d
+langcode: vi
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: vpBH8OmL4sdesCdeZLsW8KOutB5gkbreWJbfjhfFKaQ
+id: comment_delete_action
+label: 'Xóa bài bình luận'
+type: comment
+plugin: 'entity:delete_action:comment'
+configuration: {  }
