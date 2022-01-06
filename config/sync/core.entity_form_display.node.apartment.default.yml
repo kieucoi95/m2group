@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.apartment.body
+    - field.field.node.apartment.field_contact
+    - field.field.node.apartment.field_district
+    - field.field.node.apartment.field_nearest_station
+    - field.field.node.apartment.field_notes
+    - field.field.node.apartment.field_price
+    - field.field.node.apartment.field_price_text
+    - field.field.node.apartment.field_station
     - node.type.apartment
   module:
     - field_group
@@ -121,6 +128,64 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_contact:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_district:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_nearest_station:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_notes:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_price:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_price_text:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_station:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2

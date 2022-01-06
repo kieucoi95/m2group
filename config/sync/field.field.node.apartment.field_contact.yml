@@ -1,0 +1,23 @@
+uuid: de55de29-f5a6-4d3b-8a27-2290cfe952c6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.apartment
+id: node.apartment.field_contact
+field_name: field_contact
+entity_type: node
+bundle: apartment
+label: 'Liên hệ tư vấn'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

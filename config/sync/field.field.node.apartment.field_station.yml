@@ -1,0 +1,29 @@
+uuid: ce8049c2-6c38-44ce-84ec-727534046443
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_station
+    - node.type.apartment
+    - taxonomy.vocabulary.ga
+id: node.apartment.field_station
+field_name: field_station
+entity_type: node
+bundle: apartment
+label: Ga
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ga: ga
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

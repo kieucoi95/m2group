@@ -1,0 +1,21 @@
+uuid: 70bf7329-59cc-4e16-8687-a6e58611f2dc
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nearest_station
+    - node.type.apartment
+  module:
+    - text
+id: node.apartment.field_nearest_station
+field_name: field_nearest_station
+entity_type: node
+bundle: apartment
+label: 'Ga gần nhất'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

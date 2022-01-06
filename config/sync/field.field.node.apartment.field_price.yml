@@ -1,0 +1,23 @@
+uuid: b2867cce-bf99-4ddb-a4b6-7f8f9cc8889f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.apartment
+id: node.apartment.field_price
+field_name: field_price
+entity_type: node
+bundle: apartment
+label: Giá
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 1
+  max: null
+  prefix: ¥
+  suffix: ''
+field_type: float

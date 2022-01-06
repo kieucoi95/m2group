@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.apartment.body
+    - field.field.node.apartment.field_contact
+    - field.field.node.apartment.field_district
+    - field.field.node.apartment.field_nearest_station
+    - field.field.node.apartment.field_notes
+    - field.field.node.apartment.field_price
+    - field.field.node.apartment.field_price_text
+    - field.field.node.apartment.field_station
     - node.type.apartment
   module:
     - text
@@ -28,4 +35,11 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_contact: true
+  field_district: true
+  field_nearest_station: true
+  field_notes: true
+  field_price: true
+  field_price_text: true
+  field_station: true
   langcode: true

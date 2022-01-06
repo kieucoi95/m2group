@@ -1,0 +1,21 @@
+uuid: 9b593fbc-58ad-4796-8855-83754e889a29
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_text
+    - node.type.apartment
+  module:
+    - text
+id: node.apartment.field_price_text
+field_name: field_price_text
+entity_type: node
+bundle: apartment
+label: 'Tiền nhà'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

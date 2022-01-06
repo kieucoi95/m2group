@@ -1,0 +1,19 @@
+uuid: 14845034-8a78-4159-833f-3f28648b3eea
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.apartment
+id: node.apartment.field_notes
+field_name: field_notes
+entity_type: node
+bundle: apartment
+label: 'Ghi chú'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
