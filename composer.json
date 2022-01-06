@@ -26,6 +26,7 @@
         "drupal/ctools": "^3.7",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.2",
+        "drupal/metatag": "^1.16",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/recreate_block_content": "^2.1",
