@@ -47,3 +47,6 @@
 /robots.txt
 /update.php
 /web.config
+
+# Ignore all media and cache files
+/sites/default/files
