@@ -1,0 +1,5 @@
+name: 'm2group'
+type: module
+description: 'm2group module'
+core: 8.x
+package: 'm2group'
