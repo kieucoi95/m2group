@@ -15,6 +15,8 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  ctools_block: 0
+  ctools_views: 0
   datetime: 0
   dblog: 0
   devel: 0
@@ -37,10 +39,12 @@ module:
   language: 0
   link: 0
   locale: 0
+  m2group: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
+  metatag_views: 0
   node: 0
   options: 0
   page_cache: 0
@@ -55,6 +59,7 @@ module:
   smtp: 0
   system: 0
   taxonomy: 0
+  taxonomy_term_depth: 0
   text: 0
   token: 0
   toolbar: 0

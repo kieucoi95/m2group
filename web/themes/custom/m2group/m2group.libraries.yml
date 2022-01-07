@@ -9,3 +9,10 @@ global-styling:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+
+search-map:
+  css:
+    theme:
+      css/search-map.css: {}
+  js:
+    js/search-map.js: {}
