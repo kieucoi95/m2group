@@ -3,7 +3,9 @@ global-styling:
     theme:
       libraries/bootstrap/bootstrap.min.css: {}
   js:
+    js/script.js: {}
     libraries/bootstrap/bootstrap.bundle.min.js: {}
+    libraries/lazyload/lazyload.min.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
