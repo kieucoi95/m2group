@@ -2,10 +2,15 @@ global-styling:
   css:
     theme:
       libraries/bootstrap/bootstrap.min.css: {}
+      css/common.css: {}
+      css/header.css: {}
+      css/footer.css: {}
+      css/font.css: {}
+      css/variable.css: {}
   js:
     js/script.js: {}
     libraries/bootstrap/bootstrap.bundle.min.js: {}
-    libraries/lazyload/lazyload.min.js: {}
+    libraries/lazyload/jquery.lazyload.min.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings

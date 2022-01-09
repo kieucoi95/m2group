@@ -1,0 +1,19 @@
+uuid: 88f8eb7b-73ae-4489-b261-23ffc6401cee
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.storage.block_content.field_way_to_company
+id: block_content.header.field_way_to_company
+field_name: field_way_to_company
+entity_type: block_content
+bundle: header
+label: 'Đường đến công ty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

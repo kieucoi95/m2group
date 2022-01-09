@@ -1,7 +1,10 @@
 (function ($, Drupal, drupalSettings) {
 
-    imageLazyLoading();
-    console.log(123);
+    $(document).ready(function () {
+        imageLazyLoading();
+        
+    });
+    
     function imageLazyLoading() {
         $("img.lazy").lazyload({
             effect : "fadeIn",

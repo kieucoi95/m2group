@@ -1,0 +1,19 @@
+uuid: f45fd57d-6036-4ca7-abeb-1f302bb8a8f7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.storage.block_content.field_time_work
+id: block_content.header.field_time_work
+field_name: field_time_work
+entity_type: block_content
+bundle: header
+label: 'Giờ làm việc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
