@@ -1,0 +1,25 @@
+uuid: 630e15f8-6ab3-44cf-9e8e-7ee1731193ba
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:copyright:6522ade5-66ed-4bdf-b867-5c4bd0576c7e'
+  module:
+    - block_content
+  theme:
+    - m2group
+id: copyright
+theme: m2group
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:6522ade5-66ed-4bdf-b867-5c4bd0576c7e'
+settings:
+  id: 'block_content:6522ade5-66ed-4bdf-b867-5c4bd0576c7e'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

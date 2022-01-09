@@ -1,1 +1,11 @@
-<h1>header</h1>
+<div id="footer">
+    <div class="logo_footer">
+        <a href="{{ url('<front>') }}">
+            <img data-original="{{ logo }}" class="lazy" alt="m2group" height="39" width="146">
+        </a>
+    </div>
+    <div class="menu_footer">
+        {{ drupal_menu('main') }}
+    </div>
+    <div class="copyright">{{ drupal_entity('block', 'copyright') }}</div>
+</div>

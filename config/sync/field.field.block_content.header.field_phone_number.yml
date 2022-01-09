@@ -1,0 +1,19 @@
+uuid: 8604b0c8-e725-4a92-8161-ae3b444dc4d3
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.storage.block_content.field_phone_number
+id: block_content.header.field_phone_number
+field_name: field_phone_number
+entity_type: block_content
+bundle: header
+label: 'Số điện thoại'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

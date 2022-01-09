@@ -1,0 +1,25 @@
+uuid: ab13b0b9-dca0-4884-9678-e25415364875
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:header:ca4c14e9-2a99-4653-8e22-1963f11a3705'
+  module:
+    - block_content
+  theme:
+    - m2group
+id: header
+theme: m2group
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:ca4c14e9-2a99-4653-8e22-1963f11a3705'
+settings:
+  id: 'block_content:ca4c14e9-2a99-4653-8e22-1963f11a3705'
+  label: Header
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
