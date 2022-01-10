@@ -1,7 +1,7 @@
 global-styling:
   css:
     theme:
-      libraries/bootstrap/bootstrap.min.css: {}
+      libraries/bootstrap/css/bootstrap.min.css: {}
       css/common.css: {}
       css/header.css: {}
       css/footer.css: {}
@@ -9,7 +9,7 @@ global-styling:
       css/variable.css: {}
   js:
     js/script.js: {}
-    libraries/bootstrap/bootstrap.bundle.min.js: {}
+    libraries/bootstrap/js/bootstrap.min.js: {}
     libraries/lazyload/jquery.lazyload.min.js: {}
   dependencies:
     - core/drupal
@@ -17,9 +17,28 @@ global-styling:
     - core/jquery
     - core/jquery.once
 
+swiper:
+  css:
+    theme:
+      https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css: {type: external, minified: true}
+  js:
+    https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js: {type: external, minified: true}
+
 search-map:
   css:
     theme:
       css/search-map.css: {}
   js:
     js/search-map.js: {}
+
+front:
+  css:
+    theme:
+      css/front.css: {}
+  js:
+    js/front.js: {}
+
+rental-process:
+  css:
+    theme:
+      css/rental-process.css: {}

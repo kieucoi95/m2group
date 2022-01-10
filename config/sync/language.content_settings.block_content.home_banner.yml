@@ -1,0 +1,11 @@
+uuid: 8c347edc-5896-48d4-9a49-ae11fafc9801
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_banner
+id: block_content.home_banner
+target_entity_type_id: block_content
+target_bundle: home_banner
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,15 @@
+uuid: fdfaad35-e518-4586-94fb-ce19c6abc350
+langcode: vi
+status: true
+dependencies: {  }
+name: images_1140_x_450
+label: 'Images 1140 x 450'
+effects:
+  f5d27916-5516-4996-8af1-13e3aa2fb7b2:
+    uuid: f5d27916-5516-4996-8af1-13e3aa2fb7b2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 760
+      anchor: center-center

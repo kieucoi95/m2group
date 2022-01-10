@@ -1,0 +1,10 @@
+uuid: a68348f3-b433-442c-ae63-0da4d472d1db
+langcode: vi
+status: true
+dependencies: {  }
+id: rental_process
+label: 'Quy trình thuê nhà'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

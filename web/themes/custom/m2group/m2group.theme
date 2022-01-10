@@ -1,5 +1,8 @@
 <?php
 
+use \Drupal\block_content\BlockContentInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+
 /**
  * @file
  * Functions to support theming in the m2group theme.
@@ -70,8 +73,27 @@ function m2group_theme_suggestions_node_alter(array &$suggestions, array $variab
 /**
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
-function m2group_preprocess_block(array &$variables) {
+function m2group_preprocess_block(&$variables) {
   $variables['base_path'] = base_path();
+  $content = $variables['elements']['content'];
+
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+    $blockType = $content['#block_content']->bundle();
+    // About us vision, mission
+    if ($blockType === 'rental_process') {
+      $variables['items'] = [];
+      foreach ($content['field_process'] as $key => $value) {
+        if (is_numeric($key)) {
+          $title = $value['#paragraph']->field_title->getValue()[0]['value'];
+          $desc = $value['#paragraph']->field_description->getValue()[0]['value'];
+          $variables['items'][] = [
+          'title' => $title,
+          'desc' => $desc,
+          ];
+        }
+      }
+    }
+  }
 }
 
 /**

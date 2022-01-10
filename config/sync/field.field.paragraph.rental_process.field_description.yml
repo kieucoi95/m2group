@@ -1,0 +1,19 @@
+uuid: f432b30c-f703-4bc6-877a-ad78fdd504b0
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.rental_process
+id: paragraph.rental_process.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: rental_process
+label: 'Mô tả'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

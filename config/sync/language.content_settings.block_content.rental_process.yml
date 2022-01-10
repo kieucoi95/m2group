@@ -1,0 +1,11 @@
+uuid: 15cec4a5-c3db-44fd-aa6c-dfe03d9fb91c
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.rental_process
+id: block_content.rental_process
+target_entity_type_id: block_content
+target_bundle: rental_process
+default_langcode: site_default
+language_alterable: false

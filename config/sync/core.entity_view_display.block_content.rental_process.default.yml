@@ -1,0 +1,25 @@
+uuid: 5aba5b3d-1150-4f80-81ec-c8f29ceb53ea
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.rental_process
+    - field.field.block_content.rental_process.field_process
+  module:
+    - entity_reference_revisions
+id: block_content.rental_process.default
+targetEntityType: block_content
+bundle: rental_process
+mode: default
+content:
+  field_process:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

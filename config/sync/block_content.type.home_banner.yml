@@ -1,0 +1,8 @@
+uuid: cfcd9746-52d4-4f66-8042-5fd3f6f7b9e5
+langcode: vi
+status: true
+dependencies: {  }
+id: home_banner
+label: 'Home - Banner'
+revision: 0
+description: ''
