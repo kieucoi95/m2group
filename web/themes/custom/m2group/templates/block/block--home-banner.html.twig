@@ -1,0 +1,17 @@
+<div class="banner">
+    <div class="img">
+        <img draggable="false" src="{{ elements.content['#block_content'].field_image.0.entity.uri.value | image_style('images_1140_x_450') }}" alt="elements.content['#block_content'].field_image.0.alt">
+    </div>
+    <div class="inner">
+        <div class="hepl-text">{{ content['#block_content'].get('field_title').getValue()[0].value }}</div>
+        <form>
+            <div class="form-item">
+                <input type="text" placeholder="{{ 'Tên ga. tên quận' | t }}">
+            </div>
+            <div class="form-submit">
+                <button type="submit"><img src="{{ base_path }}/themes/custom/m2group/images/search.svg" alt="search"></button>
+            </div>
+        </form>
+    </div>
+</div>
+

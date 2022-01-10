@@ -23,3 +23,10 @@ search-map:
       css/search-map.css: {}
   js:
     js/search-map.js: {}
+
+front:
+  css:
+    theme:
+      css/front.css: {}
+  js:
+    js/front.js: {}

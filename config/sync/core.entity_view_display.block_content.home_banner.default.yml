@@ -1,0 +1,34 @@
+uuid: d960a923-7795-4855-8e42-a25f34fe64c9
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_banner
+    - field.field.block_content.home_banner.field_image
+    - field.field.block_content.home_banner.field_title
+  module:
+    - image
+id: block_content.home_banner.default
+targetEntityType: block_content
+bundle: home_banner
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

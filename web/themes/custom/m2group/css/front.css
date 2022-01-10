@@ -1,0 +1,72 @@
+/* Banner */
+.home_banner .banner {
+    position: relative;
+}
+
+.home_banner .banner .inner {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    max-width: 638px;
+}
+
+.home_banner .hepl-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.home_banner form {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.home_banner form input {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 30px rgb(0 0 0 / 30%);
+    border-radius: 3px;
+    border: none;
+    height: 60px;
+    padding: 0 16px;
+    transition: 0.3s;
+}
+
+.home_banner form input:focus {
+    border: 1px solid var(--red-color); 
+    outline: none;
+}
+
+.home_banner form input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #979797;
+}
+
+.home_banner .form-item {
+    width: 100%;
+}
+
+.home_banner .form-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 90px;
+}
+
+.home_banner .form-submit button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: var(--red-color);
+    border-radius: 3px;
+}
