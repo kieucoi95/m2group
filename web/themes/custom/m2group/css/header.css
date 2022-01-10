@@ -23,6 +23,10 @@
     align-items: center;
 }
 
+.main_header .logo img {
+    object-fit: contain;
+}
+
 .main_header > .container {
     display: flex;
 }
@@ -62,7 +66,7 @@
     display: inline-block;
 }
 
-.main-menu ul a:hover {
+.main-menu ul a:hover, .main-menu ul a.is-active {
     font-weight: 600;
     border-color: var(--red-color);
 }
