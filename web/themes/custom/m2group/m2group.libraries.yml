@@ -9,7 +9,7 @@ global-styling:
       css/variable.css: {}
   js:
     js/script.js: {}
-    libraries/bootstrap/js/bootstrap.min.js: {}
+    libraries/bootstrap/js/bootstrap.bundle.min.js: {}
     libraries/lazyload/jquery.lazyload.min.js: {}
   dependencies:
     - core/drupal
