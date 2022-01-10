@@ -1,0 +1,32 @@
+uuid: 949133d1-fa25-4a38-8824-28e5f681b730
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rental_process.field_description
+    - field.field.paragraph.rental_process.field_title
+    - paragraphs.paragraphs_type.rental_process
+id: paragraph.rental_process.default
+targetEntityType: paragraph
+bundle: rental_process
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

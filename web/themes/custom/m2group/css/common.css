@@ -1,0 +1,8 @@
+a, a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}

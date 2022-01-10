@@ -1,0 +1,31 @@
+uuid: 812a575c-2672-41a6-972e-c2fbe0eb06c3
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:home_banner:5a0232f5-7e48-4caa-912c-d3b5a86d5836'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: home_banner
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:5a0232f5-7e48-4caa-912c-d3b5a86d5836'
+settings:
+  id: 'block_content:5a0232f5-7e48-4caa-912c-d3b5a86d5836'
+  label: 'Trang chủ - Banner'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

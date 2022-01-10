@@ -1,0 +1,31 @@
+uuid: b4887bbc-55b5-42d6-8040-d7b19c4c7260
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.rental_process
+    - field.storage.block_content.field_process
+    - paragraphs.paragraphs_type.rental_process
+  module:
+    - entity_reference_revisions
+id: block_content.rental_process.field_process
+field_name: field_process
+entity_type: block_content
+bundle: rental_process
+label: 'Quy trình'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      rental_process: rental_process
+    target_bundles_drag_drop:
+      rental_process:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

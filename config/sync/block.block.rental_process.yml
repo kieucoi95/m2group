@@ -1,0 +1,31 @@
+uuid: 2cc56d42-b739-45e1-a0d2-ccf4fd8b0832
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:rental_process:ea714502-6014-464b-9b17-2e9b43704744'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: rental_process
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:ea714502-6014-464b-9b17-2e9b43704744'
+settings:
+  id: 'block_content:ea714502-6014-464b-9b17-2e9b43704744'
+  label: 'Quy trình thuê nhà'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /rental-process
+    negate: false
+    context_mapping: {  }

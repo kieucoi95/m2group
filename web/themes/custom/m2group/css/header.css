@@ -1,0 +1,125 @@
+#header {
+    padding-bottom: 109px;
+}
+
+.main_header {
+    height: 109px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 10%);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+
+.toolbar-tray-open .main_header {
+    top: 78px;
+}
+
+.main_header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.main_header .logo img {
+    object-fit: contain;
+}
+
+.main_header > .container {
+    display: flex;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header_right {
+    display: flex;
+}
+
+.main-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    transition: 0.3s;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+}
+
+.main-menu ul a:hover, .main-menu ul a.is-active {
+    font-weight: 600;
+    border-color: var(--red-color);
+}
+
+.main-menu ul li:not(:last-child) {
+    margin-right: 40px;
+}
+
+.main_header .phone a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--red-color);
+    display: flex;
+    align-items: center;
+}
+
+.main_header .phone a img  {
+    margin-right: 13px;
+    height: 27;
+    width: 27px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid var(--red-color);
+    padding: 5px;
+}
+
+#language_dropdown {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-left: 80px;
+}
+
+.main_header .company {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #E4E4E4;
+}
+
+.main_header .company > div {
+    color: var(--red-color);
+}
+
+.main_header .company > div:not(:last-child) {
+    margin-right: 80px;
+}
+
+.main_header .company > div b {
+    color: #000;
+}

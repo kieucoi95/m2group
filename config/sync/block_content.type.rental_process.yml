@@ -1,0 +1,8 @@
+uuid: f3bc99d0-eccc-4caf-9a6e-12f1855a50a4
+langcode: vi
+status: true
+dependencies: {  }
+id: rental_process
+label: 'Quy trình thuê nhà'
+revision: 0
+description: ''

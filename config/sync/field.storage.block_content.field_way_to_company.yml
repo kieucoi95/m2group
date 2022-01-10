@@ -1,0 +1,21 @@
+uuid: 985e5bdf-2513-446a-bc5b-4c395a95ad46
+langcode: vi
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_way_to_company
+field_name: field_way_to_company
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
