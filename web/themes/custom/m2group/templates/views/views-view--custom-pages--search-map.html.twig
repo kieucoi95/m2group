@@ -32,8 +32,7 @@
  * @ingroup themeable
  */
 #}
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXo9jy7Ze6jzQcDtTX8vNvF3pDyvuJ324"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXo9jy7Ze6jzQcDtTX8vNvF3pDyvuJ324&libraries=places"></script>
 {{ attach_library('m2group/search-map') }}
 
 {%
@@ -42,10 +41,36 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="map-wrapper">
+  <div class="map-block">
     <div class="addr-input">
-      <input type="text" name="search-map-input" placeholder="{{ 'Nhập địa chỉ'|t }}" />
-      {# <img src="{{  }}" /> #}
+      <input type="text" id="search-map-input" name="search-map-input" placeholder="{{ 'Nhập địa chỉ'|t }}" />
+    </div>
+    <div class="map-wrapper">
+      <div id="map"></div>
+    </div>
+    <div class="apartment">
+      {% set data = view.result %}
+      {{ drupal_dump(data) }}
+      {% for row in data %}
+        {% set e = row._entity %}
+        <div
+          class="item"
+          lat="{{ e.field_latitude.value }}"
+          lon="{{ e.field_longtitude.value }}"
+          price="{{ '¥ ' ~ e.field_price.value|number_format(1, '.', ',') }}"
+        >
+          <div class="info-wrapper">
+            <div class="text">
+              <div class="name">{{ e.title.value }}</div>
+              <div class="contact">{{ 'Liên hệ tư vấn: '|t }} <b>{{ e.field_contact.value }}</b></div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div id="show-info">
+      <span class="close-btn">&#10006;</span>
+      <div class="info"></div>
     </div>
   </div>
 </div>
