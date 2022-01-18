@@ -42,3 +42,8 @@ rental-process:
   css:
     theme:
       css/rental-process.css: {}
+
+faq:
+  css:
+    theme:
+      css/faq.css: {}

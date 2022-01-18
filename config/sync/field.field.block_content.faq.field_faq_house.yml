@@ -1,0 +1,34 @@
+uuid: 94d4a6b9-8c98-4502-ac3f-c420b9fcaed9
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.faq
+    - field.storage.block_content.field_faq_house
+    - paragraphs.paragraphs_type.faq
+  module:
+    - entity_reference_revisions
+id: block_content.faq.field_faq_house
+field_name: field_faq_house
+entity_type: block_content
+bundle: faq
+label: 'Liên quan đến nhà'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      faq: faq
+    target_bundles_drag_drop:
+      faq:
+        enabled: true
+        weight: 3
+      rental_process:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

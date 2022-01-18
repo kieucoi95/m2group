@@ -167,12 +167,35 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: 'P1: Quy trình thuê nhà'
     position: 1
     display_options:
       display_extenders:
         metatag_display_extender: {  }
       path: rental-process
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'P2: Câu hỏi thường gặp'
+    position: 2
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      title: 'Câu hỏi thường gặp'
+      defaults:
+        title: false
+      path: faq
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

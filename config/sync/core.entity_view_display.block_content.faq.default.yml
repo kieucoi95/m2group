@@ -1,0 +1,45 @@
+uuid: 74b2ba1a-8563-4491-ab93-7eb9a3a0c1e6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.faq
+    - field.field.block_content.faq.field_faq_contract
+    - field.field.block_content.faq.field_faq_cost
+    - field.field.block_content.faq.field_faq_house
+  module:
+    - entity_reference_revisions
+id: block_content.faq.default
+targetEntityType: block_content
+bundle: faq
+mode: default
+content:
+  field_faq_contract:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_faq_cost:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_faq_house:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

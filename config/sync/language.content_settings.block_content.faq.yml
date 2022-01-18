@@ -1,0 +1,11 @@
+uuid: 9b1288fb-f0fa-4e13-8488-aa7fd5a025d2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.faq
+id: block_content.faq
+target_entity_type_id: block_content
+target_bundle: faq
+default_langcode: site_default
+language_alterable: false
