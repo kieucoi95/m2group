@@ -1,0 +1,31 @@
+uuid: f5e42b3c-fd19-466b-9878-a1ffcdf1c3aa
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:faq:65787bee-8af3-4c35-b40e-493c7e6f6cfc'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: faq
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:65787bee-8af3-4c35-b40e-493c7e6f6cfc'
+settings:
+  id: 'block_content:65787bee-8af3-4c35-b40e-493c7e6f6cfc'
+  label: FAQ
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /faq
+    negate: false
+    context_mapping: {  }

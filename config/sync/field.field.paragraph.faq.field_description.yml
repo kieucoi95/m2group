@@ -1,0 +1,19 @@
+uuid: 5667d28e-7ef6-42ca-9fcb-c56aab059b8f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: faq
+label: 'Trả lời'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

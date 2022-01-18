@@ -1,0 +1,29 @@
+uuid: b5a2cf52-3031-482c-984b-d529d04595c7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_description
+    - field.field.paragraph.faq.field_title
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

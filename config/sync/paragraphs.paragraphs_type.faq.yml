@@ -1,0 +1,10 @@
+uuid: 4af08b76-6341-48e9-99d4-dab2d94b9fd4
+langcode: vi
+status: true
+dependencies: {  }
+id: faq
+label: 'Câu hỏi thường gặp'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
