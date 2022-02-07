@@ -1,0 +1,6 @@
+services:
+  m2group_custom.twig.extension:
+    class: Drupal\m2group_custom\TwigExtension\M2groupCustomTwigExtension
+    arguments: []
+    tags:
+      - { name: twig.extension }

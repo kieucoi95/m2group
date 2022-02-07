@@ -3,6 +3,7 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -36,9 +37,11 @@ module:
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   language: 0
   link: 0
   locale: 0
+  m2group_custom: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
