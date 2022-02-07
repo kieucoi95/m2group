@@ -31,6 +31,13 @@ search-map:
   js:
     js/search-map.js: {}
 
+search:
+  css:
+    theme:
+      css/search.css: {}
+  js:
+    js/search.js: {}
+
 front:
   css:
     theme:

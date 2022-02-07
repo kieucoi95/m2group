@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains m2group_custom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function m2group_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the m2group_custom module.
+    case 'help.page.m2group_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module for m2group') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,5 @@
+name: 'm2group_custom'
+type: module
+description: 'Custom module for m2group'
+core: 8.x
+package: 'm2group'
