@@ -13,13 +13,27 @@
       <span>{{ 'Tìm kiếm theo tên ga'|t }}</span>
       <div class="box-search">
         <div class="input-wrapper">
-          <input type="text" id="_input">
+          <div class="_select">
+            <select name="_select" id="_select">
+              <option value="default">{{ 'Tên ga'|t }}</option>
+            </select>
+          </div>
           <div class="img-wrapper">
             <img src="/jobs/1_m2group/m2group/web/themes/custom/m2group/images/search.svg">
           </div>
         </div>
         <div class="filter-wrapper">
           <img src="/jobs/1_m2group/m2group/web/themes/custom/m2group/images/filter.svg">
+        </div>
+        <div class="flat-type">
+          <div class="flat-type-item flat-type-item-1">
+            <input id="for_rent" type="radio" name="flat_type" value="0">
+            <label for="for_rent">{{ 'Thuê'|t }}</label>
+          </div>
+          <div class="flat-type-item flat-type-item-2">
+            <input id="for_sale" type="radio" name="flat_type" value="0">
+            <label for="for_sale">{{ 'Bán'|t }}</label>
+          </div>
         </div>
       </div>
     </div>
