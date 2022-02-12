@@ -1,0 +1,7 @@
+m2group_custom.config:
+  path: '/admin/config/m2group'
+  defaults:
+    _form: '\Drupal\m2group_custom\Form\M2groupConfigForm'
+    _title: 'M2group Settings'
+  requirements:
+    _permission: 'access user profiles'
