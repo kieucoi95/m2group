@@ -1,0 +1,5 @@
+m2group_custom.settings:
+  title: 'M2group Settings'
+  route_name: m2group_custom.config
+  parent: system.admin_config
+  weight: -99
