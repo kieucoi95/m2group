@@ -36,7 +36,8 @@
         "drupal/taxonomy_term_depth": "^2.5",
         "drupal/token": "^1.10",
         "drupal/twig_tweak": "^2.9",
-        "drupal/webform": "^6.1"
+        "drupal/webform": "^6.1",
+        "drupal/youtube": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"

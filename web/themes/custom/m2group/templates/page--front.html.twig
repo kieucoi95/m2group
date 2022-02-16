@@ -42,7 +42,20 @@
     {% extends "page.html.twig" %}
     {% block body %}
     {{ attach_library('m2group/front') }}
+    {{ attach_library('m2group/swiper') }}
     <section class="home_banner">
         {{ drupal_entity('block', 'home_banner') }}
+    </section>
+    <section class="home_navigation">
+        {{ drupal_entity('block', 'homenavigation') }}
+    </section>
+    <section class="home_promo">
+        {{ drupal_entity('block', 'homepromo') }}
+    </section>
+    <section class="home_utilities">
+        {{ drupal_entity('block', 'home_utilities') }}
+    </section>
+    <section class="home_video">
+        {{ drupal_entity('block', 'home_video') }}
     </section>
     {% endblock %}

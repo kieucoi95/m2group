@@ -1,0 +1,20 @@
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="container">
+        <h2 class="block_title">{{ label }}</h2>
+        <div class="swiper" id="home_utilities">
+            <div class="swiper-wrapper">
+                {% for item in items %}
+                <div class="swiper-slide">
+                        <div class="img">
+                            <img src="{{ file_url(item.img) }}" alt="{{ item.alt }}">
+                        </div>
+                        <div class="title">{{ item.title }}</div>
+                        <div class="description">{{ item.description | raw }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

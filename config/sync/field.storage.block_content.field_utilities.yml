@@ -1,0 +1,21 @@
+uuid: c1d146ce-a2f6-4df1-a1e5-0c89a6095b66
+langcode: vi
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_utilities
+field_name: field_utilities
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

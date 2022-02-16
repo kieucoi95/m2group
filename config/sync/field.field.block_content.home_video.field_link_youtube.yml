@@ -1,0 +1,21 @@
+uuid: aebf12df-2d5f-4d48-9906-9e2b1b0b2ab5
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_video
+    - field.storage.block_content.field_link_youtube
+  module:
+    - youtube
+id: block_content.home_video.field_link_youtube
+field_name: field_link_youtube
+entity_type: block_content
+bundle: home_video
+label: 'Link YouTube'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

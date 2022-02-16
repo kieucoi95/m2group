@@ -1,0 +1,31 @@
+uuid: c5d975cb-a0e9-4e1e-a177-cd51dba43b0f
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:home_promo:527f9bae-9a1f-4d44-8073-8cd14b4c4430'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: homepromo
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:527f9bae-9a1f-4d44-8073-8cd14b4c4430'
+settings:
+  id: 'block_content:527f9bae-9a1f-4d44-8073-8cd14b4c4430'
+  label: 'Home - Promo'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

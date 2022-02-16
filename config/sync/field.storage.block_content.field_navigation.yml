@@ -1,0 +1,21 @@
+uuid: 9109f427-9cdd-4a4c-b4b5-8c7e93a2550f
+langcode: vi
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_navigation
+field_name: field_navigation
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

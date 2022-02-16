@@ -1,0 +1,8 @@
+uuid: b6628431-ed51-43a3-9289-ec47b4c5267e
+langcode: vi
+status: true
+dependencies: {  }
+id: home_promo
+label: 'Home - Promo'
+revision: 0
+description: ''

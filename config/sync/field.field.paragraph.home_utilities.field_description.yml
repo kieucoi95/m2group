@@ -1,0 +1,19 @@
+uuid: ec94225f-0b5f-42f8-bd2f-334839978951
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.home_utilities
+id: paragraph.home_utilities.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: home_utilities
+label: 'Mô tả'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

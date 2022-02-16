@@ -1,0 +1,44 @@
+uuid: 506ced9d-3de0-467a-b693-68e634af728a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_utilities.field_description
+    - field.field.paragraph.home_utilities.field_image
+    - field.field.paragraph.home_utilities.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.home_utilities
+  module:
+    - image
+id: paragraph.home_utilities.default
+targetEntityType: paragraph
+bundle: home_utilities
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

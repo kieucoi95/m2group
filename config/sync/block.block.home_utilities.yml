@@ -1,0 +1,31 @@
+uuid: 3c2744d2-27ef-48b7-81e1-b4bf39022970
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:home_utilities:4fe6abd7-c32a-42fe-be20-cbc28ab46570'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: home_utilities
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:4fe6abd7-c32a-42fe-be20-cbc28ab46570'
+settings:
+  id: 'block_content:4fe6abd7-c32a-42fe-be20-cbc28ab46570'
+  label: 'LÝ DO CHỌN M2GROUP'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

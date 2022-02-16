@@ -1,0 +1,15 @@
+uuid: 01ff6df3-750d-4226-8232-03e514d78695
+langcode: vi
+status: true
+dependencies: {  }
+name: images_120_x_100
+label: 'images 120 x 100'
+effects:
+  765fe2d2-abc2-4ef7-a7b1-42a352704fd0:
+    uuid: 765fe2d2-abc2-4ef7-a7b1-42a352704fd0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 120
+      height: 100
+      anchor: center-center

@@ -1,0 +1,19 @@
+uuid: dd077a7e-e6e7-4ed8-b2b4-4f128e5acc19
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.home_utilities
+id: paragraph.home_utilities.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: home_utilities
+label: 'Tiêu đề'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
