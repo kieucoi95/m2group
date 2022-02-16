@@ -35,23 +35,17 @@ function m2group_preprocess_html(array &$variables) {
  * Implements hook_page_attachments_alter().
  */
 function m2group_page_attachments_alter(array &$page) {
-  // Tell IE to use latest rendering engine (not to use compatibility mode).
-  /*$ie_edge = [
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => [
-    'http-equiv' => 'X-UA-Compatible',
-    'content' => 'IE=edge',
-    ],
+  $config = \Drupal::config('m2group_custom.settings');
+  $product_url = $config->get('product_page_url');
+  $page['#attached']['drupalSettings']['m2group'] = [
+      'product_url' => $product_url
   ];
-  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
 }
 
 /**
  * Implements hook_preprocess_page() for page.html.twig.
  */
 function m2group_preprocess_page(array &$variables) {
-
 }
 
 /**

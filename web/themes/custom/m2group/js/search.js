@@ -23,7 +23,7 @@
             });
             // Add bootstrap classes
             $('#edit-station>div>ul>li>ul>li>ul>li').each(function() {
-                $(this).addClass('col-md-3 col-sm-6');
+                $(this).addClass('col-md-3 col-6');
                 $(this).parent().addClass('row');
             });
             // Search handler
@@ -33,6 +33,10 @@
                 '#edit-station>div>ul>li>ul>li>ul>li>div>input'
             );
         };
+        $('.box-search .filter-wrapper').click(function() {
+            $('.box-search').toggleClass('show_filter');
+        });
+        Drupal.search.initSelect2();
     };
 
     Drupal.search.handler = function(allCheckboxQuery, bigCheckboxQuery, smallCheckboxQuery) {
@@ -60,6 +64,19 @@
                     $(this).removeClass('check');
                 });
             }
+        });
+    };
+
+    Drupal.search.initSelect2 = function() {
+        let initSelectOpt = function() {
+            $('#edit-station>div>ul>li>ul>li>ul>li>div').each(function() {
+                let val = $(this).find('input').val();
+                let text = $(this).find('label').text();
+                $('#_select').append('<option value="' + val + '">' + text + '</option>');
+            });
+        };
+        $.when(initSelectOpt()).done(function() {
+            $('#_select').select2();
         });
     };
 })(jQuery, Drupal);

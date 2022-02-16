@@ -142,6 +142,7 @@
     padding-top: 96px;
     background-image: url('../images/dot_bg.svg');
     background-repeat: no-repeat;
+    padding-bottom: 50px;
 }
 
 .search-page-wrapper .box-search-wrapper {
@@ -177,12 +178,55 @@
     width: 40px;
     top: 0;
     right: -85px;
+    cursor: pointer;
 }
 
-.search-page-wrapper .box-search-wrapper .box-search .input-wrapper select {
+.search-page-wrapper .box-search-wrapper .box-search .input-wrapper ._select .select2-selection {
+    height: 60px;
+    border: 0;
+}
+
+.select2-selection__rendered {
+    height: 60px;
+    display: flex !important;
+    align-items: center;
+}
+
+ul.select2-results__options>li:nth-child(1) {
+    display: none;
+}
+
+.select2-selection__arrow {
+    display: none;
+}
+
+.search-page-wrapper .box-search-wrapper .box-search .input-wrapper {
+    display: flex;
+}
+
+.search-page-wrapper .box-search-wrapper .box-search .input-wrapper ._select {
     height: 60px;
     border: 0;
     width: calc(100% - 90px);
+}
+
+.search-page-wrapper .box-search-wrapper .box-search .input-wrapper ._select>span {
+    width: 100% !important;
+}
+
+input.select2-search__field {
+    border-radius: 3px;
+    outline: 0;
+}
+
+.search-page-wrapper .box-search-wrapper .box-search .input-wrapper .img-wrapper {
+    height: 60px;
+    width: 90px;
+    background-color: #AA1C21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
 }
 
 .search-page-wrapper>div>form {
@@ -190,4 +234,58 @@
     background-color: #ffffff;
     box-shadow: 0px 10px 50px rgb(0 0 0 / 15%);
     border-radius: 10px;
+}
+
+.flat-type {
+    height: 0;
+    transition: 0.3s;
+    display: flex;
+    overflow: hidden;
+    margin-top: 15px;
+    width: 117px;
+    justify-content: space-between;
+}
+
+.box-search.show_filter .flat-type {
+    height: 24px;
+}
+
+#edit-station>div>ul>li>ul>li>ul>li.col-6 {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+    .search-page-wrapper .box-search-wrapper .box-search .filter-wrapper {
+        display: none;
+    }
+    .station-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+    #edit-station>div>ul>li>ul>li>div {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .search-page-wrapper>div>form {
+        padding: 0 16px 0 16px;
+        box-shadow: unset;
+    }
+    .search-page-wrapper>.search-page {
+        padding: 0;
+    }
+    #edit-station>div>ul>li>ul>li>ul label {
+        font-size: 12px;
+    }
+    .search-page-wrapper {
+        background-image: unset;
+        padding-bottom: 0;
+    }
+    .search-page [data-drupal-selector="edit-actions"] input {
+        margin-bottom: 60px;
+    }
+    #edit-station>div>ul>li {
+        margin-bottom: 30px;
+    }
 }

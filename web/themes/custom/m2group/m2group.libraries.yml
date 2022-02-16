@@ -35,8 +35,10 @@ search:
   css:
     theme:
       css/search.css: {}
+      libraries/select2/select2.min.css: {}
   js:
     js/search.js: {}
+    libraries/select2/select2.min.js: {}
 
 front:
   css:
