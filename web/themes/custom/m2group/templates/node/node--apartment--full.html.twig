@@ -1,0 +1,135 @@
+{{ attach_library('m2group/apartment-full') }}
+{{ attach_library('m2group/swiper') }}
+{%
+    set classes = [
+        'node-article-full',
+        'block_content',
+    ]
+%}
+<div class="node-apartment-full">
+    <div class="container">
+        <h2 class="block-title">{{ 'Chi tiết căn hộ' | t }}</h2>
+        <article{{ attributes.addClass(classes) }}>
+            {{ title_prefix }}
+            {{ title_suffix }}
+            <div class="gallery">
+                <div class="title">
+                    <h1 class="page_title">{{ node.label }}</h1>
+                    <a href="{{ node.field_contact.value }}">
+                        <div class="btn-contact">{{ 'Liên hệ tư vấn' | t }}</div>
+                    </a>
+                </div>
+
+                <div class="swiper gallery_slide">
+                    <div class="swiper-wrapper">
+                        {% for item in  node.field_gallery %}
+                        <div class="swiper-slide">
+                            <img src="{{ item.entity.uri.value | image_style('images_1500_x_684')  }}" />
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="controls_price">
+                        <div class="price">¥ {{ node.field_price.value }}</div>
+                        <div class="control">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="note_thumb">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="swiper gallery_slide_thumb">
+                                <div class="swiper-wrapper">
+                                    {% for item in  node.field_gallery %}
+                                    <div class="swiper-slide">
+                                        <img src="{{ item.entity.uri.value | image_style('images_120_x_100')  }}" />
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note col-md-6">{{ node.field_notes.value }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="apartment_inner">
+                <div class="description">
+                    {{ content.body }}
+                </div>
+                <div class="list_description">
+                    {% if node.field_price_text.value %}
+                    <div class="item">
+                        <div class="title_">{{ 'Tiền nhà' | t }}</div>
+                        <div class="content_">{{ node.field_price_text.value | raw }}</div>
+                    </div>
+                    {% endif %}
+                    {% if node.field_nearest_station.value %}
+                    <div class="item">
+                        <div class="title_">{{ 'Ga gần nhất' | t }}</div>
+                        <div class="content_">{{ node.field_nearest_station.value | raw }}</div>
+                    </div>
+                    {% endif %}
+                    {% if node.field_utilities.0 %}
+                    <div class="item">
+                        <div class="title_">{{ 'Tiện ích' | t }}</div>
+                        <div class="content_">
+                            <div class="list_utilities">
+                                {% for item in node.field_utilities %}
+                                <div class="utilities">{{ item.entity.name.value }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if node.field_address.value %}
+                    <div class="item">
+                        <div class="title_">{{ 'Địa chỉ' | t }}</div>
+                        <div class="content_">{{ node.field_address.value | raw }}</div>
+                    </div>
+                    {% endif %}
+                    {% if node.field_address.value %}
+                    <div class="item">
+                        <div class="title_">{{ 'Nhận xét' | t }}</div>
+                        <div class="content_">{{ node.field_comment.value | raw }}</div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="position">
+                    <div class="title_desc">{{ 'Vị trí Bất động sản' | t }}</div>
+                    <div class="map" id="map" data-lat="{{ node.field_latitude.value }}" data-lng="{{ node.field_longtitude.value }}"></div>
+                </div>
+            </div>
+            
+        </article>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXo9jy7Ze6jzQcDtTX8vNvF3pDyvuJ324&callback=initMap&v=weekly" async></script>
+
+<script>
+    function initMap() {
+        let lat = parseFloat(jQuery('.map').attr('data-lat'));
+        let lng = parseFloat(jQuery('.map').attr('data-lng'));
+        const myLatLng = { lat: lat, lng: lng };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: myLatLng,
+        });
+
+        const image = "{{ base_path }}/themes/custom/m2group/images/marker.png";
+        const beachMarker = new google.maps.Marker({
+            position: myLatLng,
+            map,
+            icon: image,
+            animation: google.maps.Animation.DROP,
+        });
+    }
+</script>
+
+<style>
+    #map {
+        height: 50vh;
+    }
+</style>

@@ -70,3 +70,139 @@
     background-color: var(--red-color);
     border-radius: 3px;
 }
+
+.home_navigation {
+    padding: 100px 0 90px;
+    background-color: #F4F5F6;
+    overflow: hidden;
+    background-image: url(../images/bg-dot.svg);
+    background-position: 24px 24px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#home_navigation {
+    overflow: visible;
+}
+
+.home_navigation .swiper-slide > a {
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0 3rem;
+    transition: 0.3s;
+    border: 2px transparent solid;
+}
+
+.home_navigation .swiper-slide > a:hover {
+    border-color: var(--red-color);
+}
+
+.home_navigation .swiper-slide > a:hover span {
+    color: var(--red-color);
+}
+
+.home_navigation .swiper-slide > a:hover img {
+    filter: unset;
+}
+
+.home_navigation .img {
+    margin-bottom: 2rem;
+}
+
+.home_navigation .img img {
+    filter: brightness(0%);
+    transition: 0.3s;
+}
+
+.home_navigation .swiper-slide span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.home_utilities {
+    padding: 100px 0 90px;
+    background-color: #213E60;
+    background-image: url(../images/bg_utilities.png);
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.home_utilities .block_title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.home_utilities .swiper-slide {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    padding: 38px 15px 26px;
+    text-align: center;
+}
+
+.home_utilities .swiper-slide .img {
+    padding: 52px;
+    background-image: url(../images/hexagon.png);
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 24px;
+}
+
+.home_utilities .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    padding-bottom: 13px;
+    margin-bottom: 17px;
+    position: relative;
+}
+
+.home_utilities .title::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 77px;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+    background-color: var(--red-color);
+}
+
+.home_utilities .description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+}
+
+#videoModalCenter .modal-dialog {
+    width: calc(100% - 30px);
+    max-width: 1200px;
+}
+
+#videoModalCenter figure {
+    margin: 0;
+}

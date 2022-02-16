@@ -1,0 +1,18 @@
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="container">
+        <div type="button" data-bs-toggle="modal" data-bs-target="#videoModalCenter">
+            <img src="{{ file_url(elements.content['#block_content'].field_image.0.entity.uri.value) }}" alt="{{ file_url(elements.content['#block_content'].field_image.0.entity.alt) }}">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModalCenter" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            {{ content.field_link_youtube }}
+        </div>
+    </div>
+</div>

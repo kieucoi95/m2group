@@ -54,3 +54,10 @@ faq:
   css:
     theme:
       css/faq.css: {}
+
+apartment-full:
+  css:
+    theme:
+      css/apartment-full.css: {}
+  js:
+    js/apartment-full.js: {}

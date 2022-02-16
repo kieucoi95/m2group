@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8724e679db44d8cff19e2e976a8241274779bee9',
+        'reference' => '93ee339350b86ea85a48a60f9add7ce8885d3d33',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -982,7 +982,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8724e679db44d8cff19e2e976a8241274779bee9',
+            'reference' => '93ee339350b86ea85a48a60f9add7ce8885d3d33',
             'dev_requirement' => false,
         ),
         'drupal/recreate_block_content' => array(
@@ -1188,6 +1188,15 @@
             'replaced' => array(
                 0 => '8.9.20',
             ),
+        ),
+        'drupal/youtube' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/youtube',
+            'aliases' => array(),
+            'reference' => '8.x-1.2',
+            'dev_requirement' => false,
         ),
         'drush/drush' => array(
             'pretty_version' => '10.6.2',

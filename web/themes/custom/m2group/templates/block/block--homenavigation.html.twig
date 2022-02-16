@@ -1,0 +1,22 @@
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    {% block content %}
+    <div class="container">
+        <div class="swiper" id="home_navigation">
+            <div class="swiper-wrapper">
+                {% for item in items %}
+                <div class="swiper-slide">
+                    <a href="{{ item.link }}" class="item">
+                        <div class="img">
+                            <img src="{{ file_url(item.img) }}">
+                        </div>
+                        <span>{{ item.title }}</span>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>
