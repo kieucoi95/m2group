@@ -1,0 +1,40 @@
+uuid: bf7043c9-ace8-4cd6-b8ae-66038df749d3
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_promo
+    - field.storage.block_content.field_banner
+    - paragraphs.paragraphs_type.home_banner
+  module:
+    - entity_reference_revisions
+id: block_content.home_promo.field_banner
+field_name: field_banner
+entity_type: block_content
+bundle: home_promo
+label: Banner
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      home_banner: home_banner
+    target_bundles_drag_drop:
+      faq:
+        weight: 5
+        enabled: false
+      home_banner:
+        enabled: true
+        weight: 6
+      home_navigation:
+        weight: 7
+        enabled: false
+      rental_process:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

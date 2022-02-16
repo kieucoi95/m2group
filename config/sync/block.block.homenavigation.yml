@@ -1,0 +1,31 @@
+uuid: 8eafe3ea-7739-45d2-b851-ef0312c410a4
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:home_navigation:0d0c326b-5413-4d2f-888e-77bdd3bca977'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: homenavigation
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:0d0c326b-5413-4d2f-888e-77bdd3bca977'
+settings:
+  id: 'block_content:0d0c326b-5413-4d2f-888e-77bdd3bca977'
+  label: 'Home - Navigation'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

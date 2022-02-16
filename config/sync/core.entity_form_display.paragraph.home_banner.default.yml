@@ -1,0 +1,35 @@
+uuid: 6c4e7abf-e9a8-4df1-9105-da176e925d4e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.home_banner.field_image
+    - field.field.paragraph.home_banner.field_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.home_banner
+  module:
+    - image
+id: paragraph.home_banner.default
+targetEntityType: paragraph
+bundle: home_banner
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

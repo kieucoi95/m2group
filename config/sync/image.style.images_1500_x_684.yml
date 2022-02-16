@@ -1,0 +1,15 @@
+uuid: e1129aba-15fc-4513-aff8-bb56493d02fd
+langcode: vi
+status: true
+dependencies: {  }
+name: images_1500_x_684
+label: 'Images 1500 x 684'
+effects:
+  627dab22-a591-4e82-bf63-8f4c16585752:
+    uuid: 627dab22-a591-4e82-bf63-8f4c16585752
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1500
+      height: 684
+      anchor: center-center

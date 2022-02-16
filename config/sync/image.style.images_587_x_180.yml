@@ -1,0 +1,15 @@
+uuid: 9f4e9a89-e8eb-4616-b466-da922dfe10c0
+langcode: vi
+status: true
+dependencies: {  }
+name: images_587_x_180
+label: 'Images 587 x 180'
+effects:
+  7b7a1dda-4023-4fc0-b868-23aa92b1bb26:
+    uuid: 7b7a1dda-4023-4fc0-b868-23aa92b1bb26
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 587
+      height: 180
+      anchor: center-center

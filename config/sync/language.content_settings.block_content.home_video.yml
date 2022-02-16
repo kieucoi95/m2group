@@ -1,0 +1,11 @@
+uuid: b8953054-2b1b-4e4e-a076-2b7a90bf74d9
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_video
+id: block_content.home_video
+target_entity_type_id: block_content
+target_bundle: home_video
+default_langcode: site_default
+language_alterable: false

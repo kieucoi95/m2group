@@ -1,0 +1,43 @@
+uuid: e4d3bcad-bc90-4489-ab24-317b6f4ca840
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_utilities
+    - field.storage.block_content.field_utilities
+    - paragraphs.paragraphs_type.home_utilities
+  module:
+    - entity_reference_revisions
+id: block_content.home_utilities.field_utilities
+field_name: field_utilities
+entity_type: block_content
+bundle: home_utilities
+label: Utilities
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      home_utilities: home_utilities
+    target_bundles_drag_drop:
+      faq:
+        weight: 6
+        enabled: false
+      home_banner:
+        weight: 7
+        enabled: false
+      home_navigation:
+        weight: 8
+        enabled: false
+      home_utilities:
+        enabled: true
+        weight: 9
+      rental_process:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

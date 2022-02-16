@@ -1,0 +1,37 @@
+uuid: 5f465c61-c19e-42c6-b64c-945e727186d5
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.home_navigation
+    - field.storage.block_content.field_navigation
+    - paragraphs.paragraphs_type.home_navigation
+  module:
+    - entity_reference_revisions
+id: block_content.home_navigation.field_navigation
+field_name: field_navigation
+entity_type: block_content
+bundle: home_navigation
+label: Navigation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      home_navigation: home_navigation
+    target_bundles_drag_drop:
+      faq:
+        weight: 4
+        enabled: false
+      home_navigation:
+        enabled: true
+        weight: 5
+      rental_process:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions
