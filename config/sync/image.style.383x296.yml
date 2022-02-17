@@ -1,0 +1,15 @@
+uuid: 5fe48452-60f6-4dc2-af90-aa5fc02b4b94
+langcode: vi
+status: true
+dependencies: {  }
+name: 383x296
+label: 383x296
+effects:
+  4bba23c4-8fe1-4355-a906-68f2f33e813d:
+    uuid: 4bba23c4-8fe1-4355-a906-68f2f33e813d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 383
+      height: 296
+      anchor: center-center

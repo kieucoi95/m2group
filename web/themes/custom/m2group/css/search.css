@@ -273,6 +273,29 @@ input.select2-search__field {
     margin-bottom: 30px;
 }
 
+@media (min-width: 991px) {
+    .search-page-wrapper::after {
+        content: "";
+        position: absolute;
+        height: 260px;
+        width: 100%;
+        bottom: -54px;
+        background-color: #F4F5F6;
+        z-index: -1;
+    }
+    .search-page-wrapper::before {
+        content: "";
+        position: absolute;
+        height: 260px;
+        width: 100%;
+        bottom: 206px;
+        background-image: url('../images/bg_dots_bottom.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 18px);
+        z-index: -1;
+    }
+}
+
 @media (max-width: 480px) {
     .search-page-wrapper .box-search-wrapper .box-search .filter-wrapper {
         display: none;
