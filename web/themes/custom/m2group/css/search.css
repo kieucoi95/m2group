@@ -1,13 +1,16 @@
-[data-drupal-selector="edit-station"] legend {
+[data-drupal-selector="edit-station"] legend,
+[data-drupal-selector="edit-district"] legend {
     display: none;
 }
 
-[data-drupal-selector="edit-station"] ul {
+[data-drupal-selector="edit-station"] ul,
+[data-drupal-selector="edit-district"] ul {
     padding: 0;
     margin: 0;
 }
 
-[data-drupal-selector="edit-station"] ul li {
+[data-drupal-selector="edit-station"] ul li,
+[data-drupal-selector="edit-district"] ul li {
     list-style-type: none;
 }
 
@@ -24,11 +27,13 @@
     text-align: center;
 }
 
-#edit-station>div>ul>li {
+#edit-station>div>ul>li,
+#edit-district>div>ul>li {
     margin-bottom: 60px;
 }
 
-#edit-station>div>ul>li>ul>li>div {
+#edit-station>div>ul>li>ul>li>div,
+#edit-district>div>ul>li>div {
     height: 70px;
     background-color: #213E60;
     color: #ffffff;
@@ -42,11 +47,13 @@
     border-radius: 10px;
 }
 
-#edit-station>div>ul>li>ul>li>ul {
+#edit-station>div>ul>li>ul>li>ul,
+#edit-district>div>ul>li>ul {
     padding: 30px 8px 0 8px;
 }
 
-#edit-station input[type="checkbox"] {
+#edit-station input[type="checkbox"],
+#edit-district input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     display: inline-block;
@@ -61,7 +68,8 @@
     position: relative;
 }
 
-#edit-station .check {
+#edit-station .check,
+#edit-district .check {
     z-index: 999;
     position: absolute;
     display: flex;
@@ -81,7 +89,8 @@
     background-position: center;
 }
 
-#edit-station input[type="checkbox"]::after {
+#edit-station input[type="checkbox"]::after,
+#edit-district input[type="checkbox"]::after {
     content: '';
     display: block;
     position: absolute;
@@ -95,28 +104,33 @@
     border-radius: 3px;
 }
 
-#edit-station .check::after {
+#edit-station .check::after,
+#edit-district .check::after {
     content: '';
     display: block;
     position: relative;
     z-index: 100;
 }
 
-#edit-station>div>ul>li>ul>li>ul input::after {
+#edit-station>div>ul>li>ul>li>ul input::after,
+#edit-district>div>ul>li>ul input::after {
     border-color: #000000 !important;
 }
 
-#edit-station>div>ul>li>ul>li>ul>li>div {
+#edit-station>div>ul>li>ul>li>ul>li>div,
+#edit-district>div>ul>li>ul>li>div {
     height: 30px;
     display: flex;
     align-items: center;
 }
 
-#edit-station>div>ul>li>ul>li>ul>li>div .check {
+#edit-station>div>ul>li>ul>li>ul>li>div .check,
+#edit-district>div>ul>li>ul>li>div .check {
     background-image: url('../images/checkbox_b.svg');
 }
 
-#edit-station>div>ul>li>ul>li>ul label {
+#edit-station>div>ul>li>ul>li>ul label,
+#edit-district>div>ul>li>ul>li>ul label {
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
@@ -236,6 +250,10 @@ input.select2-search__field {
     border-radius: 10px;
 }
 
+.search-page-wrapper>div.district-search>form {
+    padding: 20px 20px 0 20px;
+}
+
 .flat-type {
     height: 0;
     transition: 0.3s;
@@ -250,7 +268,8 @@ input.select2-search__field {
     height: 24px;
 }
 
-#edit-station>div>ul>li>ul>li>ul>li.col-6 {
+#edit-station>div>ul>li>ul>li>ul>li.col-6,
+#edit-district>div>ul>li>ul>li.col-6 {
     margin-bottom: 30px;
 }
 
@@ -264,7 +283,8 @@ input.select2-search__field {
         margin-bottom: 32px;
         text-align: left;
     }
-    #edit-station>div>ul>li>ul>li>div {
+    #edit-station>div>ul>li>ul>li>div,
+    #edit-district>div>ul>li>ul>li>div {
         font-size: 16px;
         line-height: 20px;
     }
@@ -275,7 +295,8 @@ input.select2-search__field {
     .search-page-wrapper>.search-page {
         padding: 0;
     }
-    #edit-station>div>ul>li>ul>li>ul label {
+    #edit-station>div>ul>li>ul>li>ul label,
+    #edit-district>div>ul>li>ul>li>ul label {
         font-size: 12px;
     }
     .search-page-wrapper {
@@ -285,7 +306,8 @@ input.select2-search__field {
     .search-page [data-drupal-selector="edit-actions"] input {
         margin-bottom: 60px;
     }
-    #edit-station>div>ul>li {
+    #edit-station>div>ul>li,
+    #edit-district>div>ul>li {
         margin-bottom: 30px;
     }
 }
