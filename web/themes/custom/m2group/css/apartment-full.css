@@ -1,5 +1,9 @@
 .node-apartment-full {
     padding: 100px 0 65px;
+    background-image: url(../images/bg-dot.svg);
+    background-position: 24px 24px;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .node-article-full {
