@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
     - field.field.node.apartment.field_station
+    - field.field.node.apartment.field_status
     - field.field.node.apartment.field_thumbnail
     - field.field.node.apartment.field_type
     - field.field.node.apartment.field_utilities
@@ -238,6 +239,12 @@ content:
     region: content
   field_station:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_status:
+    weight: 42
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -1,0 +1,27 @@
+uuid: a0168d7b-e818-4452-b714-3ba894812885
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_status
+field_name: field_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Hết phòng'
+    -
+      value: '2'
+      label: 'Còn phòng'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

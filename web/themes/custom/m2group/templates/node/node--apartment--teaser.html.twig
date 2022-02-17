@@ -1,0 +1,25 @@
+<div class="apartment">
+  <div class="thumb-wrapper">
+    <div class="district">
+      {% set district = term(node.field_district.target_id) %}
+      {{ district.name.value }}
+    </div>
+    <div class="img-wrapper">
+      <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+        <img src="{{ url_img(node.field_thumbnail.target_id, '383x296') }}" alt="{{ node.field_thumbnail.alt }}">
+      </a>
+    </div>
+  </div>
+  <div class="apartment-info">
+    {% if node.field_status.value %}
+      <div class="status three_dots_1" title="{{ node.field_status.getSetting('allowed_values')[node.field_status.value] }}">{{ node.field_status.getSetting('allowed_values')[node.field_status.value] }}</div>
+    {% endif %}
+    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}"><div class="title three_dots_1" title="{{ node.title.value }}">{{ node.title.value }}</div></a>
+    {% if node.field_nearest_station.value %}
+      <div class="nearest-station three_dots_1" title="{{ node.field_nearest_station.value|raw }}">{{ node.field_nearest_station.value|raw }}</div>
+    {% endif %}
+    {% if node.field_price.value %}
+      <div class="price">¥ {{ node.field_price.value|number_format(0, ',', '.')  }}</div>
+    {% endif %}
+  </div>
+</div>

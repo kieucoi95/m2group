@@ -3,6 +3,7 @@ langcode: vi
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - node.type.apartment
     - taxonomy.vocabulary.district
     - taxonomy.vocabulary.ga
@@ -457,9 +458,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
+  product_page:
     display_plugin: page
-    id: page_1
+    id: product_page
     display_title: 'Product Page'
     position: 2
     display_options:
@@ -472,6 +473,8 @@ display:
         pager: false
         filters: false
         filter_groups: false
+        style: false
+        row: false
       path: product
       pager:
         type: full
@@ -493,7 +496,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 5
+          quantity: 4
       filters:
         status:
           value: '1'
@@ -690,6 +693,18 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:

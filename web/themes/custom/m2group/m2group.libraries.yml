@@ -63,3 +63,10 @@ apartment-full:
       css/apartment-full.css: {}
   js:
     js/apartment-full.js: {}
+
+product-listing:
+  css:
+    theme:
+      css/product-listing.css: {}
+  js:
+    js/product-listing.js: {}

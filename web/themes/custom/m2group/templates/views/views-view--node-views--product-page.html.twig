@@ -1,0 +1,19 @@
+{{ attach_library('m2group/product-listing') }}
+
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'container',
+    'product-page'
+  ]
+%}
+
+<div class="product-page-wrapper">
+  <div{{ attributes.addClass(classes) }}>
+    <div class="exposed-block" style="display:none">{{ exposed }}</div>
+    <h1 class="product-tit">{{ 'Sản phẩm'|t }}</h1>
+    <div class="rows-block row">{{ rows }}</div>
+    {{ empty }}
+    {{ pager }}
+  </div>
+</div>
