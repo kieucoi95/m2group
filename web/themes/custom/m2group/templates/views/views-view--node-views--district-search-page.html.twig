@@ -5,18 +5,18 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
     'container',
     'search-page',
-    'station-search'
+    'district-search'
   ]
 %}
 <div class="search-page-wrapper">
   <div{{ attributes.addClass(classes) }}>
     <div class="box-search-wrapper">
-      <span>{{ 'Tìm kiếm theo tên ga'|t }}</span>
+      <span>{{ 'Tìm kiếm theo quận'|t }}</span>
       <div class="box-search">
         <div class="input-wrapper">
           <div class="_select">
             <select name="_select" id="_select">
-              <option value="default">{{ 'Tên ga'|t }}</option>
+              <option value="default">{{ 'Tên quận'|t }}</option>
             </select>
           </div>
           <div class="img-wrapper">
