@@ -120,7 +120,7 @@ h1.page_title {
 }
 
 .apartment_inner {
-    padding: 50px;
+    padding: 50px 50px 100px;
 }
 
 .description {
@@ -187,4 +187,19 @@ h1.page_title {
     line-height: 25px;
     color: #000000;
     margin-bottom: 20px;
+}
+
+#map {
+    margin-bottom: 90px;
+}
+
+h2.block_title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.2em;
+    color: #000000;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }

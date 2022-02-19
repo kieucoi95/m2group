@@ -1,0 +1,57 @@
+{#
+    /**
+     * @file
+     * Default theme implementation to display a view of unformatted rows.
+     *
+     * Available variables:
+     * - title: The title of this group of rows. May be empty.
+     * - rows: A list of the view's row items.
+     *   - attributes: The row's HTML attributes.
+     *   - content: The row's content.
+     * - view: The view object.
+     * - default_row_class: A flag indicating whether default classes should be
+     *   used on rows.
+     *
+     * @see template_preprocess_views_view_unformatted()
+     *
+     * @ingroup themeable
+     */
+    #}
+    {{ attach_library('m2group/product-listing') }}
+    {{ attach_library('m2group/swiper-old-version') }}
+    <div class="container">
+        <div class="block-header">
+            <h2 class="block_title">{{ 'Nhà mới' | t }}</h2>
+            <div class="control">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div class="slide_products">
+            <div class="swiper" id="products">
+                <div class="swiper-wrapper">
+                    {% set i = 0 %}
+                    {% set limit = 2 %}
+                    <div class="swiper-slide"> {# Mở Slide #}
+                        {% for row in rows %}
+                            {% if i < limit and loop.index != rows|length %}
+                                {% set i = i + 1 %}
+                                {{ row.content }}
+                            {% endif %}
+                            {% if i >= limit %}
+                                {% set i = 0 %}
+                                </div> {# Đóng Slide #}
+                                {% if loop.index != rows|length %}
+                                <div class="swiper-slide"> {# Mở Slide #}
+                                {% endif %}
+                            {% endif %}
+                            {% if loop.index == rows|length %}
+                                {{ row.content }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
