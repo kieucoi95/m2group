@@ -31,8 +31,10 @@
         {{ title_prefix }}
         {{ title_suffix }}
         {% block content %}
+        <div class="text_scroll_wrapper_top" style="overflow: hidden;">
+            <div class="txt-rotate text_scroll">{{ 'M2GROUP' | t }}</div>
+        </div>
         <div class="container">
-            
             <div class="row">
                 {% for item in items %}
                 <div class="col-md-6">
@@ -46,6 +48,13 @@
                 <img src="{{ base_path }}/themes/custom/m2group/images/house_1.png">
             </div>
         </div>
-        <div class="txt-rotate">{{ 'm2group' | t }}</div>
+        <div class="text_scroll_wrapper">
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+            <div class="txt-rotate text_scroll">{{ 'm2group' | t }}</div>
+        </div>
         {% endblock %}
     </div>
