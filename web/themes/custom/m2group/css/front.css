@@ -141,6 +141,7 @@
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .home_utilities .block_title {
@@ -202,6 +203,21 @@
     color: #000000;
 }
 
+.home_video {
+    padding-top: 100px;
+    position: relative;
+}
+
+.home_video:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #F4F5F6;
+    bottom: 0;
+    z-index: -1;
+}
+
 #videoModalCenter .modal-dialog {
     width: calc(100% - 30px);
     max-width: 1200px;
@@ -209,4 +225,74 @@
 
 #videoModalCenter figure {
     margin: 0;
+}
+
+.products {
+    position: relative;
+    height: 100%;
+}
+
+.products .slide_products {
+    position: relative;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #F4F5F6;
+    top: 0;
+    z-index: -1;
+}
+
+.products .block_title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.products .block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products .block-header .control {
+    position: relative;
+    width: 100px;
+}
+
+.products .swiper-slide .apartment:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.control .swiper-button-next:after, .control .swiper-button-prev:after {
+    color: var(--red-color);
+    font-size: 25px;
+}
+
+.control .swiper-button-disabled {
+    opacity: 1;
+}
+
+.control .swiper-button-disabled::after {
+    color: #000!important;
+}
+
+.home_promo .container {
+    position: relative;
+    padding: 100px 0 200px;
+}
+
+.home_promo .container .bg_ {
+    position: absolute;
+    bottom: -50px;
+    left: -30px;
+    z-index: 1;
 }

@@ -100,8 +100,9 @@
                     <div class="title_desc">{{ 'Vị trí Bất động sản' | t }}</div>
                     <div class="map" id="map" data-lat="{{ node.field_latitude.value }}" data-lng="{{ node.field_longtitude.value }}"></div>
                 </div>
+                <h2 class="block_title">{{ 'Sản phẩm tương tự' | t }}</h2>
+                {{ drupal_view('node_views', 'block_2', node.id, node.field_district.entity.tid.value) }}
             </div>
-            
         </article>
     </div>
 </div>

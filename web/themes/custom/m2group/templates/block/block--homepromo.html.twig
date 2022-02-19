@@ -32,6 +32,7 @@
         {{ title_suffix }}
         {% block content %}
         <div class="container">
+            
             <div class="row">
                 {% for item in items %}
                 <div class="col-md-6">
@@ -41,7 +42,10 @@
                 </div>
                 {% endfor %}
             </div>
+            <div class="bg_">
+                <img src="{{ base_path }}/themes/custom/m2group/images/house_1.png">
+            </div>
         </div>
-
+        <div class="txt-rotate">{{ 'm2group' | t }}</div>
         {% endblock %}
     </div>

@@ -46,4 +46,13 @@
     videoModal.addEventListener('hidden.bs.modal', function (event) {
         $('.home_video .youtube-field-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
     })
+
+    var products = new Swiper("#products", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        navigation: {
+            nextEl: ".control .swiper-button-next",
+            prevEl: ".control .swiper-button-prev",
+        },
+    });
 })(jQuery, Drupal, drupalSettings);

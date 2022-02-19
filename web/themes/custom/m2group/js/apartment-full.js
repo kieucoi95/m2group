@@ -17,4 +17,23 @@
             },
         });
     });
+
+    var related = new Swiper("#related", {
+        slidesPerView: 1.5,
+        spaceBetween: 25,
+        breakpoints: {
+            640: {
+                slidesPerView: 1.5,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            },
+        },
+    });
 })(jQuery, Drupal, drupalSettings);

@@ -1,0 +1,22 @@
+uuid: 8b7f1bec-0486-495f-bccd-4c2c82a5686e
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+id: content_path
+label: 'Content path'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fe747f92-4991-4b08-9ff4-afd1b1ec70d5:
+    id: node_type
+    bundles:
+      apartment: apartment
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fe747f92-4991-4b08-9ff4-afd1b1ec70d5
+selection_logic: and
+weight: -5
+relationships: {  }
