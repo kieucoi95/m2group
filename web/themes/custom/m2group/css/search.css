@@ -50,6 +50,14 @@
 #edit-station>div>ul>li>ul>li>ul,
 #edit-district>div>ul>li>ul {
     padding: 30px 8px 0 8px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+#edit-station>div>ul>li>ul>li.open>ul,
+#edit-district>div>ul>li.open>ul {
+    height: auto;
 }
 
 #edit-station input[type="checkbox"],
@@ -262,10 +270,16 @@ input.select2-search__field {
     margin-top: 15px;
     width: 117px;
     justify-content: space-between;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 155px;
 }
 
 .box-search.show_filter .flat-type {
-    height: 24px;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    height: 56px;
 }
 
 #edit-station>div>ul>li>ul>li>ul>li.col-6,

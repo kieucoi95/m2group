@@ -46,7 +46,7 @@
                 </div>
                 <div class="language">
                     <div class="dropdown">
-                        <button type="button" id="language_dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        {# <button type="button" id="language_dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="{{ base_path }}themes/custom/m2group/images/flag-vni.svg" alt="flag-vni.svg">
                             VNI
                             <img src="{{ base_path }}themes/custom/m2group/images/angel-down.svg" alt="angel-down.svg">
@@ -64,7 +64,8 @@
                                 VNI
                                 <img src="{{ base_path }}themes/custom/m2group/images/angel-down.svg" alt="angel-down.svg">
                             </li>
-                        </ul>
+                        </ul> #}
+                        {{ drupal_entity('block', 'gtranslate', check_access=true) }}
                     </div>
                 </div>
             </div>
@@ -81,4 +82,39 @@
         </div>
     </div>
     {% endblock %}
+</div>
+
+<div class="mobile-panel-wrapper">
+    <div class="modal_mb"></div>
+    <div class="elems">
+        <div class="inside-wrapper">
+            <div class="logo">
+                <a href="{{ url('<front>') }}">
+                    <img data-original="{{ logo }}" class="lazy" alt="m2group" height="47" width="178">
+                </a>
+            </div>
+            <div class="main-menu">
+                {{ drupal_menu('main') }}
+            </div>
+            <div class="gtranslate-mb"></div>
+            <div class="contact">
+                <div class="phone">
+                        <div class="img"><a
+                                href="tel:{{ content['#block_content'].get('field_phone_number').getValue()[0].value }}"><img
+                                    src="{{ base_path }}themes/custom/m2group/images/phone.svg" alt="phone">{{
+                                content['#block_content'].get('field_phone_number').getValue()[0].value }}</a></div>
+                    </div>
+            </div>
+            <div class="company">
+                <div class="time-work">
+                    <img src="{{ base_path }}/themes/custom/m2group/images/time.svg" alt="time">
+                    <b>{{ 'Giờ làm việc:' }}</b> {{ content['#block_content'].get('field_time_work').getValue()[0].value }}
+                </div>
+                <div class="way-to-company">
+                    <img src="{{ base_path }}/themes/custom/m2group/images/marker_1.svg" alt="marker">
+                    <b>{{ 'Đường đến công ty:' }}</b> {{ content['#block_content'].get('field_way_to_company').getValue()[0].value }}
+                </div>
+            </div>
+        </div>
     </div>
+</div>

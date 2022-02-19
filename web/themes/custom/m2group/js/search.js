@@ -30,7 +30,8 @@
             Drupal.search.handler(
                 '#edit-station input[type="checkbox"]',
                 '#edit-station>div>ul>li>ul>li>div>input',
-                '#edit-station>div>ul>li>ul>li>ul>li>div>input'
+                '#edit-station>div>ul>li>ul>li>ul>li>div>input',
+                '#edit-station>div>ul>li>ul>li>div'
             );
         };
         if ($('#edit-district').length) {
@@ -43,7 +44,8 @@
             Drupal.search.handler(
                 '#edit-district input[type="checkbox"]',
                 '#edit-district>div>ul>li>div>input',
-                '#edit-district>div>ul>li>ul>li>div>input'
+                '#edit-district>div>ul>li>ul>li>div>input',
+                '#edit-district>div>ul>li>div'
             );
         };
         $('.box-search .filter-wrapper').click(function() {
@@ -52,15 +54,22 @@
         Drupal.search.initSelect2();
     };
 
-    Drupal.search.handler = function(allCheckboxQuery, bigCheckboxQuery, smallCheckboxQuery) {
+    Drupal.search.handler = function(allCheckboxQuery, bigCheckboxQuery, smallCheckboxQuery, titleBarQuery) {
         let allCheckbox = $(allCheckboxQuery);
         let bigCheckbox = $(bigCheckboxQuery);
+        let titleBar = $(titleBarQuery);
         let paramText = 'station';
         if ($('.district-search').length) {
             paramText = 'district';
-
         }
 
+        titleBar.click(function() {
+            let li = $(this).parent();
+            let li_sibs = li.siblings('li');
+            li.toggleClass('open');
+            li_sibs.removeClass('open');
+            li.parent().parent().siblings('li').find('>ul>li').removeClass('open');
+        })
         allCheckbox.change(function() {
             if ($(this).prop('checked')) {
                 $(this).addClass('check');

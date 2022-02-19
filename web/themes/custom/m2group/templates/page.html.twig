@@ -45,10 +45,11 @@
      * @ingroup themeable
      */
     #}
-    <div id="gtranslate" style="position:fixed;z-index:100">{{ page.header.gtranslate }}</div>
+
     <div class="layout-container">
         <header id="header" >
             {% include directory ~ '/templates/includes/header.html.twig' %}
+            {# {{ include(directory ~ '/templates/includes/header.html.twig', {'gtranslate': page.header.gtranslate}) }} #}
         </header>
 
         {% block body %}
