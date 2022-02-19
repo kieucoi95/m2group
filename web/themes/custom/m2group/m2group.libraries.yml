@@ -40,6 +40,13 @@ search:
     js/search.js: {}
     libraries/select2/select2.min.js: {}
 
+select2:
+  css:
+    theme:
+      libraries/select2/select2.min.css: {}
+  js:
+    libraries/select2/select2.min.js: {}
+
 front:
   css:
     theme:
