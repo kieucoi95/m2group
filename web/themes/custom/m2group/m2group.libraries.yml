@@ -20,9 +20,9 @@ global-styling:
 swiper:
   css:
     theme:
-      https://unpkg.com/swiper@7.3.2/swiper-bundle.min.css: {type: external, minified: true}
+      https://unpkg.com/swiper/swiper-bundle.min.css: {type: external, minified: true}
   js:
-    https://unpkg.com/swiper@7.3.2/swiper-bundle.min.js: {type: external, minified: true}
+    https://unpkg.com/swiper/swiper-bundle.min.js: {type: external, minified: true}
 
 search-map:
   css:

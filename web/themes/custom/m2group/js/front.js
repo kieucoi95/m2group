@@ -24,7 +24,7 @@
     });
 
     var home_utilities = new Swiper("#home_utilities", {
-        slidesPerView: 1.5,
+        slidesPerView: 1.3,
         spaceBetween: 25,
         breakpoints: {
             640: {
@@ -62,4 +62,27 @@
         initSelectOpt();
     };
     searchHandler();
+
+    var products = new Swiper("#products", {
+        slidesPerView: 1,
+        spaceBetween: 25,
+        navigation: {
+            nextEl: ".control .swiper-button-next",
+            prevEl: ".control .swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1.5,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 2.7,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+    });
 })(jQuery, Drupal, drupalSettings);
