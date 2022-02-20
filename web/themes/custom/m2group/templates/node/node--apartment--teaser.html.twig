@@ -1,7 +1,7 @@
 <div class="apartment">
   <div class="thumb-wrapper">
-    <div class="district">
-      {% set district = term(node.field_district.target_id) %}
+    {% set district = term(node.field_district.target_id) %}
+    <div class="district three_dots_1" title="{{ district.name.value }}">
       {{ district.name.value }}
     </div>
     <div class="img-wrapper">
