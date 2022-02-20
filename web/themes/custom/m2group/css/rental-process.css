@@ -127,3 +127,46 @@
     color: #000000;
     white-space: break-spaces;
 }
+
+@media(max-width: 767px) {
+    #block-rental-process {
+        padding: 40px 0 0;
+        background-size: 50% auto;
+        background-position: 0 0;
+    }
+
+    .block-title {
+        font-size: 24px;
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+
+    .list_process::before, .list_process::after {
+        display: none;
+    }
+
+    .list_process {
+        padding: 30px 15px;
+    }
+
+    .list_process .item {
+        margin: 15px 0;
+    }
+    
+    .title {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    .inner {
+        margin-left: 15px;
+        width: calc(100% - 87px);
+    }
+
+    .index::after {
+        height: 270%;
+    }
+}
