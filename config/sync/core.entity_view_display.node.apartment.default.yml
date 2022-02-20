@@ -53,13 +53,12 @@ content:
     type: text_default
     region: content
   field_contact:
-    weight: 104
+    weight: 118
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
     region: content
   field_district:
     weight: 103

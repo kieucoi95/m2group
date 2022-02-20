@@ -172,11 +172,12 @@ content:
     type: text_textarea
     region: content
   field_contact:
-    weight: 40
+    weight: 43
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
     region: content
   field_district:
     weight: 4

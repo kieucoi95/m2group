@@ -1,4 +1,4 @@
-uuid: de55de29-f5a6-4d3b-8a27-2290cfe952c6
+uuid: 90f2dc88-57bf-4c0b-b79f-cbf1f255d874
 langcode: vi
 status: true
 dependencies:
@@ -15,9 +15,5 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  min: null
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+settings: {  }
+field_type: string

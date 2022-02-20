@@ -48,18 +48,34 @@
     })
 
     let searchHandler = function() {
+        let s = $('[name="district_station"]');
         let initSelectOpt = function() {
-            let s = $('[name="district_station"]');
             s.append('<option value="default">' + s.attr('placeholder') + '</option>');
             let stationElemWrappers = $('#edit-station-data>div>ul>li>ul>li>ul>li>div');
-            let districtElemWrappers = $('#edit-station-data>div>ul>li>ul>li>div');
+            let districtElemWrappers = $('#edit-district-data>div>ul>li>ul>li>div');
             stationElemWrappers.each(function() {
                 let val = $(this).find('input').val();
                 let text = $(this).find('label').text();
-                s.append('<option value="' + val + '">' + s.attr('stext') + ' ' + text + '</option>');
-            })
+                s.append('<option value="' + val + '" type="station">' + s.attr('stext') + ' ' + text + '</option>');
+            });
+            districtElemWrappers.each(function() {
+                let val = $(this).find('input').val();
+                let text = $(this).find('label').text();
+                s.append('<option value="' + val + '" type="district">' + s.attr('dtext') + ' ' + text + '</option>');
+            });
         };
-        initSelectOpt();
+        $.when(initSelectOpt()).done(function() {
+            s.select2();
+            $('.search-btn').click(function(e) {
+                e.preventDefault();
+                if (s.val() != 'default') {
+                    let type = s.find('option[value="' + s.val() + '"]').attr('type');
+                    console.log(type);
+                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?' + type + '=' + s.val();
+                    window.location.href = productPageUrl;
+                }
+            })
+        });
     };
     searchHandler();
 
