@@ -26,6 +26,10 @@
     margin-bottom: 41px;
 }
 
+.rows-block>div {
+    margin-bottom: 25px;
+}
+
 .three_dots_1 {
     overflow: hidden;
     display: -webkit-box;
@@ -147,3 +151,97 @@ ul.pager__items>li.is-active>a {
         background: unset;
     }
 }
+
+
+/* Filter */
+
+[data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes ul,
+[data-drupal-selector="edit-district"] .fieldset-wrapper .form-checkboxes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+[data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul,
+[data-drupal-selector="edit-district"] .fieldset-wrapper .form-checkboxes>ul {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+    width: max-content;
+    width: fit-content;
+    display: none;
+    position: absolute;
+    text-align: left;
+    z-index: 1;
+}
+
+[data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul>li>div,
+[data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul>li>ul>li>div,
+[data-drupal-selector="edit-district"] .fieldset-wrapper .form-checkboxes>ul>li>div {
+    display: none;
+}
+
+[data-drupal-selector="edit-station"] label.option,
+[data-drupal-selector="edit-district"] label.option {
+    margin-left: 10px;
+}
+
+.exposed-block fieldset legend span,
+.exposed-block select {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.exposed-block .js-form-type-select>label {
+    display: none;
+}
+
+.exposed-block form {
+    display: flex;
+    align-items: center;
+}
+
+.exposed-block {
+    margin-bottom: 30px;
+}
+
+.exposed-block fieldset:not(:nth-child(1)),
+.exposed-block form>div {
+    margin-left: 15px;
+}
+
+.exposed-block fieldset,
+.exposed-block select,
+.exposed-block .form-actions>input {
+    height: 38px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    min-width: 100px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .exposed-block form {
+        flex-wrap: wrap;
+    }
+    .exposed-block select,
+    .exposed-block .form-actions>input {
+        width: 100%;
+    }
+    .exposed-block fieldset,
+    .exposed-block form>div {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 5px;
+        flex-grow: 1;
+        position: relative;
+    }
+    [data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul,
+    [data-drupal-selector="edit-district"] .fieldset-wrapper .form-checkboxes>ul {
+        width: 100%;
+    }
+}
+
+
+/* End Filter */
