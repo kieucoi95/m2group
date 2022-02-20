@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.apartment.field_notes
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
+    - field.field.node.apartment.field_room_amount
     - field.field.node.apartment.field_station
     - field.field.node.apartment.field_status
     - field.field.node.apartment.field_thumbnail
@@ -78,26 +79,20 @@ content:
     type: image
     region: content
   field_latitude:
-    weight: 113
+    weight: 121
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_decimal
+    type: string
     region: content
   field_longtitude:
-    weight: 112
+    weight: 120
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_decimal
+    type: string
     region: content
   field_nearest_station:
     weight: 108
@@ -131,6 +126,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_room_amount:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_station:
     weight: 102

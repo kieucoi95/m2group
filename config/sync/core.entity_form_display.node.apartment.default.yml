@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.apartment.field_notes
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
+    - field.field.node.apartment.field_room_amount
     - field.field.node.apartment.field_station
     - field.field.node.apartment.field_status
     - field.field.node.apartment.field_thumbnail
@@ -50,8 +51,8 @@ third_party_settings:
     group_img_overview:
       children:
         - field_gallery
-        - field_contact
         - field_notes
+        - field_contact
       parent_name: group_info_apartment
       weight: 12
       format_type: tab
@@ -68,6 +69,7 @@ third_party_settings:
       children:
         - title
         - field_type
+        - field_room_amount
         - field_station
         - field_district
         - field_price
@@ -180,7 +182,7 @@ content:
     type: string_textfield
     region: content
   field_district:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -194,18 +196,20 @@ content:
     type: image_image
     region: content
   field_latitude:
-    weight: 37
+    weight: 46
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
     region: content
   field_longtitude:
-    weight: 36
+    weight: 45
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
     region: content
   field_nearest_station:
     weight: 32
@@ -224,7 +228,7 @@ content:
     type: string_textfield
     region: content
   field_price:
-    weight: 5
+    weight: 6
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -238,8 +242,14 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_room_amount:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_station:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -251,7 +261,7 @@ content:
     type: options_select
     region: content
   field_thumbnail:
-    weight: 6
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

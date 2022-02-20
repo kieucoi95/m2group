@@ -1,4 +1,4 @@
-uuid: 6944f7b3-9952-4703-8a52-2b33d2ea5a07
+uuid: a02d1994-461c-4154-ac6e-bd478d20022d
 langcode: vi
 status: true
 dependencies:
@@ -7,8 +7,11 @@ dependencies:
 id: node.field_latitude
 field_name: field_latitude
 entity_type: node
-type: float
-settings: {  }
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

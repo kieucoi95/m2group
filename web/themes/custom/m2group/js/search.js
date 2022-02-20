@@ -121,7 +121,7 @@
                 station_arr = [];
                 smallCheckbox.each(function() {
                     let val = $(this).val();
-                    station_arr.push(paramText + '%5B%5D=' + val);
+                    station_arr.push(paramText + '%5B' + val + '%5D=' + val);
                 })
                 station_params += station_arr.join("&");
                 let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + station_params;
@@ -135,7 +135,7 @@
             let station_params = '?';
             let arr = [];
             if (val != 'default') {
-                arr.push(paramText + '%5B%5D=' + val);
+                arr.push(paramText + '%5B' + val + '%5D=' + val);
             }
             if ($('input[name="flat_type"]:checked').length) {
                 arr.push('type=' + $('input[name="flat_type"]:checked').val());

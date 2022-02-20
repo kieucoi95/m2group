@@ -70,8 +70,7 @@
                 e.preventDefault();
                 if (s.val() != 'default') {
                     let type = s.find('option[value="' + s.val() + '"]').attr('type');
-                    console.log(type);
-                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?' + type + '=' + s.val();
+                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?' + type + '%5B' + s.val() + '%5D=' + s.val();
                     window.location.href = productPageUrl;
                 }
             })
