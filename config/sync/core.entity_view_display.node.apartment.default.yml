@@ -79,26 +79,20 @@ content:
     type: image
     region: content
   field_latitude:
-    weight: 113
+    weight: 121
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_decimal
+    type: string
     region: content
   field_longtitude:
-    weight: 112
+    weight: 120
     label: above
     settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_decimal
+    type: string
     region: content
   field_nearest_station:
     weight: 108

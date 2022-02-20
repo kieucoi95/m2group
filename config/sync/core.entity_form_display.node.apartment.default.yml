@@ -196,18 +196,20 @@ content:
     type: image_image
     region: content
   field_latitude:
-    weight: 37
+    weight: 46
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
     region: content
   field_longtitude:
-    weight: 36
+    weight: 45
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
     region: content
   field_nearest_station:
     weight: 32
