@@ -9,7 +9,8 @@
             <div class="hepl-text">{{ content['#block_content'].get('field_title').getValue()[0].value }}</div>
             <form>
                 <div class="form-item">
-                    <input type="text" placeholder="{{ 'Tên ga. tên quận' | t }}">
+                    <select name="district_station" type="text" placeholder="{{ 'Tên ga, tên quận' | t }}" stext="{{ 'Ga'|t }}" dtext="{{ 'Quận'|t }}"></select>
+                    {# <input type="text"> #}
                 </div>
                 <div class="form-submit">
                     <button type="submit"><img src="{{ base_path }}themes/custom/m2group/images/search.svg" alt="search"></button>

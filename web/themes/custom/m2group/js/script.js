@@ -20,7 +20,6 @@
             if ($('.nturl').length > 0) {
                 $('.nturl').each(function() {
                     let langcode = $(this).attr('onclick').split(";")[0].replace("doGTranslate('vi|", '').slice(0, -2);
-                    // $(this).text(langcode);
                     let span = $(this).find('span')[0].outerHTML
                     $(this).html(span + langcode);
                     if (langcode == 'vi') {
@@ -28,7 +27,9 @@
                     }
                     $('.gtranslate').fadeIn(300);
                 })
-                $('#block-gtranslate').appendTo('.gtranslate-mb');
+                if ($(window).width() <= 991) {
+                    $('#block-gtranslate').appendTo('.gtranslate-mb');
+                }
             } else {
                 gtranslateTimeout = setTimeout(function() {
                     gtranslate();
