@@ -67,6 +67,13 @@ function m2group_theme_suggestions_node_alter(array &$suggestions, array $variab
 }
 
 /**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function m2group_preprocess_views_view(&$variables) {
+  $variables['base_path'] = base_path();
+}
+
+/**
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function m2group_preprocess_block(&$variables) {

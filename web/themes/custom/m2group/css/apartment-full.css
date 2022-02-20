@@ -42,6 +42,7 @@ h1.page_title {
     font-size: 30px;
     line-height: 38px;
     color: #FFFFFF;
+    max-width: calc(100% - 220px);
 }
 
 .btn-contact {
@@ -230,6 +231,7 @@ h2.block_title {
     h1.page_title {
         font-size: 26px;
         line-height: normal;
+        max-width: 100%;
     }
 
     .btn-contact {

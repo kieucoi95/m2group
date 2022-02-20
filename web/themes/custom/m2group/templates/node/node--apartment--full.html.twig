@@ -113,6 +113,7 @@
     function initMap() {
         let lat = parseFloat(jQuery('.map').attr('data-lat'));
         let lng = parseFloat(jQuery('.map').attr('data-lng'));
+
         const myLatLng = { lat: lat, lng: lng };
         const map = new google.maps.Map(document.getElementById("map"), {
             zoom: 15,
