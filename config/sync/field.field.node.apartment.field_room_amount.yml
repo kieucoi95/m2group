@@ -1,0 +1,21 @@
+uuid: 1673ae87-a915-40fe-916c-556c1ca836b4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_amount
+    - node.type.apartment
+  module:
+    - options
+id: node.apartment.field_room_amount
+field_name: field_room_amount
+entity_type: node
+bundle: apartment
+label: 'Số lượng phòng'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

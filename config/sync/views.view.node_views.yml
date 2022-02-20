@@ -65,7 +65,7 @@ display:
               secondary_label: 'Tùy chọn nâng cao'
               secondary_open: false
             filter:
-              field_station_target_id_1:
+              field_station_target_id:
                 plugin_id: bef
                 advanced:
                   sort_options: false
@@ -75,7 +75,15 @@ display:
                   is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
-                display_inline: false
+                display_inline: true
+              field_type_value:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Tất cả -|Chọn loại hình'
+                  collapsible: false
+                  is_secondary: false
               field_district_target_id:
                 plugin_id: bef
                 advanced:
@@ -86,7 +94,15 @@ display:
                   is_secondary: false
                 select_all_none: false
                 select_all_none_nested: false
-                display_inline: false
+                display_inline: true
+              field_room_amount_value:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Tất cả -|Số lượng phòng'
+                  collapsible: false
+                  is_secondary: false
       pager:
         type: mini
         options:
@@ -757,7 +773,7 @@ display:
           exposed: true
           expose:
             operator_id: field_station_target_id_op
-            label: 'Ga (field_station)'
+            label: 'Chọn Ga'
             description: ''
             use_operator: false
             operator: field_station_target_id_op
@@ -804,7 +820,7 @@ display:
           exposed: true
           expose:
             operator_id: field_type_value_op
-            label: 'Loại hình (field_type)'
+            label: 'Loại hình'
             description: ''
             use_operator: false
             operator: field_type_value_op
@@ -846,7 +862,7 @@ display:
           exposed: true
           expose:
             operator_id: field_district_target_id_op
-            label: 'Quận (field_district)'
+            label: 'Chọn Quận'
             description: ''
             use_operator: false
             operator: field_district_target_id_op
@@ -880,6 +896,51 @@ display:
           hierarchy: true
           error_message: false
           plugin_id: taxonomy_index_tid
+        field_room_amount_value:
+          id: field_room_amount_value
+          table: node__field_room_amount
+          field: field_room_amount_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_room_amount_value_op
+            label: 'Số lượng phòng'
+            description: ''
+            use_operator: false
+            operator: field_room_amount_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: room_amount
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: 0
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: 1
+          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:

@@ -348,6 +348,7 @@ body.panel-open .hamburger {
     }
     .main_header {
         height: 91px;
+        border-radius: 0px 0px 10px 10px;
     }
     .main_header .logo {
         margin: 0 auto;
@@ -361,7 +362,6 @@ body.panel-open .hamburger {
     .hamburger {
         display: block;
     }
-
     #header {
         padding-bottom: 91px;
     }
