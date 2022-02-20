@@ -27,8 +27,7 @@
     text-align: center;
 }
 
-#edit-station>div>ul>li,
-#edit-district>div>ul>li {
+#edit-station>div>ul>li {
     margin-bottom: 60px;
 }
 
@@ -45,19 +44,41 @@
     line-height: 23px;
     text-transform: uppercase;
     border-radius: 10px;
+    position: relative;
+}
+
+#edit-station>div>ul>li>ul>li>div::before,
+#edit-district>div>ul>li>div::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    height: 14px;
+    width: 26px;
+    background: url(../images/up_arrow_white.svg) no-repeat;
+    transition: 0.3s;
+    transform: rotate(180deg);
+}
+
+#edit-station>div>ul>li>ul>li.open>div::before,
+#edit-district>div>ul>li.open>div::before {
+    transform: rotate(0);
 }
 
 #edit-station>div>ul>li>ul>li>ul,
 #edit-district>div>ul>li>ul {
     padding: 30px 8px 0 8px;
-    height: 0;
+    display: none;
     overflow: hidden;
+}
+
+#edit-station>div>ul>li>ul>li,
+#edit-district>div>ul>li {
     transition: 0.3s;
 }
 
-#edit-station>div>ul>li>ul>li.open>ul,
-#edit-district>div>ul>li.open>ul {
-    height: auto;
+#edit-station>div>ul>li>ul>li:not(.open),
+#edit-district>div>ul>li:not(.open) {
+    margin-bottom: 30px;
 }
 
 #edit-station input[type="checkbox"],

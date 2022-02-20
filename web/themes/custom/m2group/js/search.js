@@ -63,12 +63,33 @@
             paramText = 'district';
         }
 
-        titleBar.click(function() {
-            let li = $(this).parent();
-            let li_sibs = li.siblings('li');
-            li.toggleClass('open');
-            li_sibs.removeClass('open');
-            li.parent().parent().siblings('li').find('>ul>li').removeClass('open');
+        titleBar.click(function(e) {
+            if (e.target === this) {
+                let li = $(this).parent();
+                let sibs_li = li.siblings('li');
+
+                li.toggleClass('open');
+                sibs_li.removeClass('open');
+                if ($(this).next().is(':hidden')) {
+                    $(this).next().slideDown({
+                        start: function() {
+                            $(this).css({
+                                display: "flex"
+                            })
+                        },
+                        duration: 300
+                    });
+                } else {
+                    $(this).next().slideUp(300);
+                }
+                if (!$('.district-search').length) {
+                    let other_li = li.parent().parent().siblings('li').find('>ul>li');
+                    other_li.removeClass('open');
+                    other_li.find('>ul').slideUp(300);
+                } else {
+                    sibs_li.find('>ul').slideUp(300);
+                }
+            }
         })
         allCheckbox.change(function() {
             if ($(this).prop('checked')) {
