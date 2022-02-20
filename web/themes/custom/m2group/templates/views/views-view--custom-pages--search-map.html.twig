@@ -50,7 +50,6 @@
     </div>
     <div class="apartment">
       {% set data = view.result %}
-      {{ drupal_dump(data) }}
       {% for row in data %}
         {% set e = row._entity %}
         <div
@@ -63,6 +62,7 @@
             <div class="text">
               <div class="name">{{ e.title.value }}</div>
               <div class="contact">{{ 'Liên hệ tư vấn: '|t }} <b>{{ e.field_contact.value }}</b></div>
+              <a href="{{ path('entity.node.canonical', {'node': e.nid.value}) }}" target="_blank" class="view-detail">{{ 'Xem chi tiết'|t }}</a>
             </div>
           </div>
         </div>

@@ -78,3 +78,8 @@
     top: 0;
     cursor: pointer;
 }
+
+#show-info a.view-detail {
+    font-weight: bold;
+    text-decoration: underline;
+}
