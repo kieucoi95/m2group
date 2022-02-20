@@ -230,6 +230,7 @@
 .products {
     position: relative;
     height: 100%;
+    overflow: hidden;
 }
 
 .products .slide_products {
@@ -246,6 +247,10 @@
     z-index: -1;
 }
 
+.products .block-header {
+    margin-bottom: 40px;
+}
+
 .products .block_title {
     font-style: normal;
     font-weight: normal;
@@ -254,7 +259,7 @@
     letter-spacing: 0.2em;
     color: #000000;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .products .block-header {
@@ -291,7 +296,7 @@
 
 .home_promo .container {
     position: relative;
-    padding: 0 0 200px;
+    padding: 0 15px 200px;
 }
 
 .home_promo .container .bg_ {
@@ -340,5 +345,81 @@
         -moz-transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 767px) {
+    .home_banner .banner .img img {
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+    }
+
+    .home_banner .hepl-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .home_banner form input {
+        height: 40px;
+    }
+
+    .home_navigation {
+        background-size: 50% auto;
+        background-position: 0 0;
+    }
+
+    .home_promo .container .col-md-6:first-child {
+        margin-bottom: 20px;
+    }
+
+    .home_promo .container .bg_ {
+        width: 108px;
+        left: 0;
+        bottom: -20px;
+    }
+
+    .home_promo .container {
+        padding: 0px 15px 80px;
+    }
+
+    .txt-rotate {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .text_scroll_wrapper_top .txt-rotate {
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+    .home_utilities {
+        padding: 50px 0 60px;
+        background-size: inherit;
+    }
+
+    .home_utilities .swiper {
+        overflow: unset;
+    }
+
+    .home_utilities .swiper-slide {
+        padding: 38px 5px 26px;
+    }
+
+    .products .block_title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .products .block-header {
+        margin-bottom: 30px;
+    }
+
+    .home_video {
+        padding-top: 0;
+    }
+
+    .home_video .container {
+        padding: 0;
     }
 }

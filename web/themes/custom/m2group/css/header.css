@@ -11,7 +11,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 9;
+    z-index: 99;
 }
 
 .toolbar-tray-open .main_header {
@@ -360,6 +360,10 @@ body.panel-open .hamburger {
     }
     .hamburger {
         display: block;
+    }
+
+    #header {
+        padding-bottom: 91px;
     }
 }
 
