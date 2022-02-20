@@ -1,4 +1,4 @@
-uuid: 20d7a967-5aa1-4c86-b919-2c13ab004079
+uuid: 8941ea6f-f147-4011-8d6a-94e00b61680f
 langcode: vi
 status: true
 dependencies:
@@ -7,10 +7,11 @@ dependencies:
 id: node.field_contact
 field_name: field_contact
 entity_type: node
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1
