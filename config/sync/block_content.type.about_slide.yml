@@ -1,0 +1,8 @@
+uuid: 7aa071f9-b10e-48ff-bbf4-b33abac0b4f3
+langcode: vi
+status: true
+dependencies: {  }
+id: about_slide
+label: 'About - Slide'
+revision: 0
+description: ''

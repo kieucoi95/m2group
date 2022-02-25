@@ -4,25 +4,14 @@ status: true
 dependencies:
   config:
     - block_content.type.home_video
-    - field.field.block_content.home_video.field_image
     - field.field.block_content.home_video.field_link_youtube
-    - image.style.thumbnail
   module:
-    - image
     - youtube
 id: block_content.home_video.default
 targetEntityType: block_content
 bundle: home_video
 mode: default
 content:
-  field_image:
-    weight: 27
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_link_youtube:
     weight: 28
     settings:

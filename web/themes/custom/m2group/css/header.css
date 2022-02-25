@@ -86,14 +86,13 @@
     align-items: center;
 }
 
-.main_header .phone a img {
+.main_header .phone a svg {
     margin-right: 13px;
-    height: 27;
-    width: 27px;
     object-fit: contain;
     border-radius: 50%;
     border: 1px solid var(--red-color);
     padding: 5px;
+    font-size: 24px;
 }
 
 #language_dropdown {

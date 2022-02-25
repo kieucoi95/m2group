@@ -1,0 +1,36 @@
+uuid: 9d926ced-131f-45ec-a75d-398129be6d79
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.storage.block_content.field_map
+  module:
+    - google_map_field
+id: block_content.about_address.field_map
+field_name: field_map
+entity_type: block_content
+bundle: about_address
+label: Map
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    preview: ''
+    actions: {  }
+    lat: '35.67555484219764'
+    name: ''
+    lon: '139.7682759320934'
+    zoom: '13'
+    type: roadmap
+    width: 100%
+    height: 450px
+    marker: '1'
+    traffic: '0'
+    marker_icon: ''
+    controls: '1'
+    infowindow: ''
+default_value_callback: ''
+settings: {  }
+field_type: google_map_field

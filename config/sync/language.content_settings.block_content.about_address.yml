@@ -1,0 +1,11 @@
+uuid: e37c595c-9c69-4e56-84f4-7ba7b8b080b2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+id: block_content.about_address
+target_entity_type_id: block_content
+target_bundle: about_address
+default_langcode: site_default
+language_alterable: false

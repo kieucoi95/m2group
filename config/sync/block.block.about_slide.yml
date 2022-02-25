@@ -1,0 +1,31 @@
+uuid: 4c6d8ed3-2b3f-4eb6-9745-4ae941583a68
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:about_slide:4e9f914d-c143-4811-a60c-4d9c3c9d3dbf'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: about_slide
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:4e9f914d-c143-4811-a60c-4d9c3c9d3dbf'
+settings:
+  id: 'block_content:4e9f914d-c143-4811-a60c-4d9c3c9d3dbf'
+  label: 'About -Slide'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about
+    negate: false
+    context_mapping: {  }

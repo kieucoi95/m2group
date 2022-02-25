@@ -1,0 +1,105 @@
+uuid: 1d95a89f-1ca0-4b4b-9d32-007ed35dca04
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_slide
+    - field.field.block_content.about_slide.field_from_1
+    - field.field.block_content.about_slide.field_from_2
+    - field.field.block_content.about_slide.field_images
+    - field.field.block_content.about_slide.field_images_2
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_slide_1:
+      children:
+        - field_from_1
+        - field_images
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        effect: bounceslide
+        description: ''
+        required_fields: true
+        open: false
+        weight: 0
+      label: 'SLide 1'
+    group_slide_2:
+      children:
+        - field_from_2
+        - field_images_2
+      parent_name: ''
+      weight: 2
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        effect: bounceslide
+        description: ''
+        required_fields: true
+        open: false
+        weight: 0
+      label: 'Slide 2'
+id: block_content.about_slide.default
+targetEntityType: block_content
+bundle: about_slide
+mode: default
+content:
+  field_from_1:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_from_2:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_images:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_images_2:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

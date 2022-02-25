@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dc057ff9944f98ed272714fbc4321820f642bf4f',
+        'reference' => '0bfea72adf37bf8bfa91f1080b2943bb2f17f0e9',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -736,6 +736,15 @@
             'reference' => '8.x-1.0-beta20',
             'dev_requirement' => false,
         ),
+        'drupal/google_map_field' => array(
+            'pretty_version' => '1.14.0',
+            'version' => '1.14.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/google_map_field',
+            'aliases' => array(),
+            'reference' => '8.x-1.14',
+            'dev_requirement' => false,
+        ),
         'drupal/gtranslate' => array(
             'pretty_version' => '1.14.0',
             'version' => '1.14.0.0',
@@ -982,7 +991,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dc057ff9944f98ed272714fbc4321820f642bf4f',
+            'reference' => '0bfea72adf37bf8bfa91f1080b2943bb2f17f0e9',
             'dev_requirement' => false,
         ),
         'drupal/recreate_block_content' => array(

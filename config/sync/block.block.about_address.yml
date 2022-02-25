@@ -1,0 +1,31 @@
+uuid: d9bce7b9-7463-4843-83d3-8abec72d5dcf
+langcode: vi
+status: true
+dependencies:
+  content:
+    - 'block_content:about_address:6447f42e-0f85-4c83-9a00-a86f4236adf2'
+  module:
+    - block_content
+    - system
+  theme:
+    - m2group
+id: about_address
+theme: m2group
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:6447f42e-0f85-4c83-9a00-a86f4236adf2'
+settings:
+  id: 'block_content:6447f42e-0f85-4c83-9a00-a86f4236adf2'
+  label: 'About - Address'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about
+    negate: false
+    context_mapping: {  }

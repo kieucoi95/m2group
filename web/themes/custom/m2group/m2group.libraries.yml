@@ -7,10 +7,12 @@ global-styling:
       css/footer.css: {}
       css/font.css: {}
       css/variable.css: {}
+      libraries/fontawesome/css/all.min.css: {}
   js:
     js/script.js: {}
     libraries/bootstrap/js/bootstrap.bundle.min.js: {}
     libraries/lazyload/jquery.lazyload.min.js: {}
+    libraries/fontawesome/js/all.min.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
@@ -23,6 +25,14 @@ swiper:
       https://unpkg.com/swiper/swiper-bundle.min.css: {type: external, minified: true}
   js:
     https://unpkg.com/swiper/swiper-bundle.min.js: {type: external, minified: true}
+
+fancybox:
+  css:
+    theme:
+      libraries/fancybox/fancybox.min.css: {}
+  js:
+    libraries/fancybox/fancybox.min.js: {}
+
 
 search-map:
   css:
@@ -77,3 +87,10 @@ product-listing:
       css/product-listing.css: {}
   js:
     js/product-listing.js: {}
+
+about:
+  css:
+    theme:
+      css/about.css: {}
+  js:
+    js/about.js: {}

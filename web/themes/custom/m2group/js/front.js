@@ -42,11 +42,6 @@
         },
     });
 
-    var videoModal = document.getElementById('videoModalCenter')
-    videoModal.addEventListener('hidden.bs.modal', function(event) {
-        $('.home_video .youtube-field-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    })
-
     let searchHandler = function() {
         let s = $('[name="district_station"]');
         let initSelectOpt = function() {

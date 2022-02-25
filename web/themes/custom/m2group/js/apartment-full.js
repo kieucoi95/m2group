@@ -1,26 +1,16 @@
 (function ($, Drupal, drupalSettings) {
     $(document).ready(function () {
         var gallery_thumb = new Swiper(".gallery_slide_thumb", {
-            spaceBetween: 10,
-            slidesPerView: 3.5,
-            freeMode: true,
-            watchSlidesProgress: true,
-            breakpoints: {
-                480: {
-                    slidesPerView: 4,
-                },
-                640: {
-                    slidesPerView: 4,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
-                1200: {
-                    slidesPerView: 4.3,
-                },
+            direction: "vertical",
+            slidesPerView: 4,
+            spaceBetween: 0,
+            mousewheel: true,
+            grid: {
+                rows: 2,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
         });
         var gallery = new Swiper(".gallery_slide", {

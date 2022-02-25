@@ -1,5 +1,6 @@
 {{ attach_library('m2group/apartment-full') }}
 {{ attach_library('m2group/swiper') }}
+{{ attach_library('m2group/fancybox') }}
 {%
     set classes = [
         'node-article-full',
@@ -20,37 +21,39 @@
                     </a>
                 </div>
 
-                <div class="swiper gallery_slide">
-                    <div class="swiper-wrapper">
-                        {% for item in  node.field_gallery %}
-                        <div class="swiper-slide">
-                            <img src="{{ item.entity.uri.value | image_style('images_1500_x_684')  }}" />
+                <div class="gallery_content">
+                    <div class="swiper gallery_slide">
+                        <div class="swiper-wrapper">
+                            {% for item in  node.field_gallery %}
+                            <div class="swiper-slide">
+                                <a href="{{ file_url(item.entity.uri.value)  }}" data-fancybox="images">
+                                    <img src="{{ file_url(item.entity.uri.value)  }}" />
+                                </a>
+                                <!-- <img src="{{ file_url(item.entity.uri.value)  }}" /> -->
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
-                    <div class="controls_price">
-                        <div class="price">¥ {{ node.field_price.value }}</div>
-                        <div class="control">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                    <div class="col__right">
+                        <div class="swiper gallery_slide_thumb">
+                            <div class="swiper-wrapper">
+                                {% for item in  node.field_gallery %}
+                                <div class="swiper-slide">
+                                    <img src="{{ item.entity.uri.value | image_style('images_120_x_100')  }}" />
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                     
                 </div>
                 <div class="note_thumb">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="swiper gallery_slide_thumb">
-                                <div class="swiper-wrapper">
-                                    {% for item in  node.field_gallery %}
-                                    <div class="swiper-slide">
-                                        <img src="{{ item.entity.uri.value | image_style('images_120_x_100')  }}" />
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="note col-md-6">{{ node.field_notes.value }}</div>
+                        <div class="price">¥ {{ node.field_price.value }}</div>
+                    <div class="note">
+                        {{ node.field_notes.value }}
                     </div>
                 </div>
             </div>
@@ -77,7 +80,7 @@
                         <div class="content_">
                             <div class="list_utilities">
                                 {% for item in node.field_utilities %}
-                                <div class="utilities">{{ item.entity.name.value }}</div>
+                                <div class="utilities"><i class="fad fa-check-circle"></i> {{ item.entity.name.value }}</div>
                                 {% endfor %}
                             </div>
                         </div>
@@ -120,7 +123,7 @@
             center: myLatLng,
         });
 
-        const image = "{{ base_path }}/themes/custom/m2group/images/marker.png";
+        const image = "http://m2group-dev.com/themes/custom/m2group/images/marker.png";
         const beachMarker = new google.maps.Marker({
             position: myLatLng,
             map,
