@@ -1,0 +1,11 @@
+uuid: fe7822b8-3672-463e-ae6c-9ac770c352a7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_slide
+id: block_content.about_slide
+target_entity_type_id: block_content
+target_bundle: about_slide
+default_langcode: site_default
+language_alterable: false

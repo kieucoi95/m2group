@@ -1,0 +1,67 @@
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    
+    <div class="map">
+        <h2 class="block_title">{{ 'Địa chỉ' | t }}</h2>
+        {{ content.field_map }}
+    </div>
+    <h2 class="block_title">{{ 'Khái quát công ty' | t }}</h2>
+    <div class="list">
+        {% if content['#block_content'].get('field_title').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="far fa-building"></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'Tên' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_title').getValue()[0].value | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+        {% if content['#block_content'].get('field_address').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="fad fa-location-circle"></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'Địa chỉ' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_address').getValue()[0].value | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+        {% if content['#block_content'].get('field_ceo').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="fad fa-user-tie"></i></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'Người đại diện/Giám đốc' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_ceo').getValue()[0].value | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+        {% if content['#block_content'].get('field_tel').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="fad fa-phone-alt"></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'TEL' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_tel').getValue()[0].value | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+        {% if content['#block_content'].get('field_fax').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="fad fa-fax"></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'FAX' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_fax').getValue()[0].value | raw }}</div>
+            </div>
+        </div>
+        {% endif %}
+        {% if content['#block_content'].get('field_bank_partner').getValue()[0].value %}
+        <div class="item">
+            <div class="icon"><i class="fad fa-piggy-bank"></i></div>
+            <div class="info">
+                <div class="item_title">{{ 'Ngân hàng đối tác' | t }}</div>
+                <div class="value">{{ content['#block_content'].get('field_bank_partner').getValue()[0].value | raw }}</div>
+
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

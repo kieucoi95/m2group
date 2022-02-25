@@ -1,0 +1,19 @@
+uuid: 86dc05c7-2ce6-47bc-b729-685e1b8f44d7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_slide
+    - field.storage.block_content.field_from_1
+id: block_content.about_slide.field_from_1
+field_name: field_from_1
+entity_type: block_content
+bundle: about_slide
+label: 'Đến từ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

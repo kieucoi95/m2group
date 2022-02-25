@@ -1,0 +1,19 @@
+uuid: a0c563f1-797a-41da-add8-cfa95d6c0ae4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.storage.block_content.field_bank_partner
+id: block_content.about_address.field_bank_partner
+field_name: field_bank_partner
+entity_type: block_content
+bundle: about_address
+label: 'Ngân hàng đối tác'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: beb483bf-cfa8-4cfb-9ff0-d88c6808c936
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.storage.block_content.field_address
+id: block_content.about_address.field_address
+field_name: field_address
+entity_type: block_content
+bundle: about_address
+label: 'Địa chỉ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

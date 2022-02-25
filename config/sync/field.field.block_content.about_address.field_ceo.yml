@@ -1,0 +1,19 @@
+uuid: fd5fa7c0-8e8b-444b-b69e-9618498ead3e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.storage.block_content.field_ceo
+id: block_content.about_address.field_ceo
+field_name: field_ceo
+entity_type: block_content
+bundle: about_address
+label: 'Người đại diện/Giám đốc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

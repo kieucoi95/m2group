@@ -1,0 +1,38 @@
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="slide_content">
+        <h3 class="slide_title">{{ content['#block_content'].get('field_from_1').getValue()[0].value }}</h3>
+        <div class="swiper about_slide_1">
+            <div class="swiper-wrapper">
+                {% for item in elements.content['#block_content'].field_images %}
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="{{ file_url(item.entity.uri.value) }}" alt="{{ item.alt }}" title="{{ item.title }}">
+                    </div>
+                    <div class="title">{{ item.title }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="slide_content">
+        <h3 class="slide_title">{{ content['#block_content'].get('field_from_2').getValue()[0].value }}</h3>
+        <div class="swiper about_slide_2">
+            <div class="swiper-wrapper">
+                {% for item in elements.content['#block_content'].field_images_2 %}
+                <div class="swiper-slide">
+                    <div class="img">
+                        <img src="{{ file_url(item.entity.uri.value) }}" alt="{{ item.alt }}" title="{{ item.title }}">
+                    </div>
+                    <div class="title">{{ item.title }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>

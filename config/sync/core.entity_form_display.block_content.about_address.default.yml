@@ -1,0 +1,90 @@
+uuid: 321a6ef5-ba1b-432c-8f66-3d5a8433d918
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.field.block_content.about_address.field_address
+    - field.field.block_content.about_address.field_bank_partner
+    - field.field.block_content.about_address.field_ceo
+    - field.field.block_content.about_address.field_fax
+    - field.field.block_content.about_address.field_map
+    - field.field.block_content.about_address.field_tel
+    - field.field.block_content.about_address.field_title
+  module:
+    - google_map_field
+id: block_content.about_address.default
+targetEntityType: block_content
+bundle: about_address
+mode: default
+content:
+  field_address:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_bank_partner:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ceo:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_fax:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_map:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: google_map_field_default
+    region: content
+  field_tel:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

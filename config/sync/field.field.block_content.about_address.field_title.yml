@@ -1,0 +1,19 @@
+uuid: 1ed4abce-bee7-46b8-87f6-e8150b337cd6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - block_content.type.about_address
+    - field.storage.block_content.field_title
+id: block_content.about_address.field_title
+field_name: field_title
+entity_type: block_content
+bundle: about_address
+label: 'Tên công ty'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

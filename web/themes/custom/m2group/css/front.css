@@ -209,6 +209,11 @@
     position: relative;
 }
 
+.home_video figure {
+    margin: 0;
+    border-radius: 10px;
+}
+
 .home_video:before {
     content: '';
     position: absolute;
