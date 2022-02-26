@@ -221,6 +221,13 @@ ul.pager__items>li.is-active>a {
     text-align: center;
 }
 
+.exposed-block fieldset legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 @media (max-width: 480px) {
     .exposed-block form {
         flex-wrap: wrap;
