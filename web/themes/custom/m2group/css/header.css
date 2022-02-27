@@ -116,6 +116,10 @@
     color: var(--red-color);
 }
 
+.main_header .company>div a {
+    color: var(--red-color);
+}
+
 .main_header .company>div:not(:last-child) {
     margin-right: 80px;
 }

@@ -116,3 +116,25 @@ h3.slide_title span {
     padding-top: 4px;
     margin-right: 15px;
 }
+
+@media (max-width: 480px) {
+    #about {
+        padding: 40px 0;
+        background-size: 50% auto;
+        background-position: 0 0;
+    }
+
+    .block_content {
+        padding: 15px;
+    }
+
+    h2.block_title {
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+
+    .page_title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
