@@ -11,6 +11,7 @@
 .select2-container--classic .select2-search--dropdown .select2-search__field {
     padding-left: 8px;
     padding-right: 8px;
+    box-shadow: unset;
 }
 
 .select2-results__group {
@@ -168,13 +169,18 @@ div.flat-type .item.for-sale::before {
 
 .select2-container--classic.select2-container--open .select2-dropdown {
     box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
-    padding-top: 5px;
+    padding-top: 0;
     background-color: #f2f2f7;
+    border-radius: 4px;
+}
+
+.select2-container {
+    top: 0 !important;
 }
 
 .select2-search--dropdown {
     background-color: #f2f2f7;
-    padding: 5px 10px;
+    padding: 0;
 }
 
 .select2-search--dropdown>input {
