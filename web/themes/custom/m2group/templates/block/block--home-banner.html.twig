@@ -1,4 +1,5 @@
 {{ attach_library('m2group/select2') }}
+{{ attach_library('m2group/autocomplete') }}
 
 <div{{ attributes }}>
     {{ title_prefix }}
@@ -9,6 +10,16 @@
         </div>
         <div class="inner">
             <div class="hepl-text">{{ content['#block_content'].get('field_title').getValue()[0].value }}</div>
+            <div class="flat-type">
+                <div class="item for-rent checked">
+                    <input id="for_rent" type="radio" name="flat_type" value="0" checked>
+                    <label for="for_rent">{{ 'Thuê'|t }}</label>
+                </div>
+                <div class="item for-sale">
+                    <input id="for_sale" type="radio" name="flat_type" value="1">
+                    <label for="for_sale">{{ 'Bán'|t }}</label>
+                </div>
+            </div>
             <form>
                 <div class="form-item">
                     <select name="district_station" type="text" placeholder="{{ 'Tên ga, tên quận' | t }}" stext="{{ 'Ga'|t }}" dtext="{{ 'Quận'|t }}"></select>
@@ -17,6 +28,15 @@
                     <button type="submit" class="search-btn"><img src="/themes/custom/m2group/images/search.svg" alt="search"></button>
                 </div>
             </form>
+            <div class="advance-filter">
+                <div class="filter-box">
+                    <div class="select-box"></div>
+                </div>
+                <div class="filter-btn">
+                    <div class="close-state">{{ 'Tìm kiếm nâng cao'|t }}</div>
+                    <div class="open-state">{{ 'Ẩn'|t }}</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

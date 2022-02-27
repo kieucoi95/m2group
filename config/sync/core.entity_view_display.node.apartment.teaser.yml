@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
     - field.field.node.apartment.field_room_amount
+    - field.field.node.apartment.field_room_type
     - field.field.node.apartment.field_station
     - field.field.node.apartment.field_status
     - field.field.node.apartment.field_thumbnail
@@ -57,6 +58,7 @@ hidden:
   field_price: true
   field_price_text: true
   field_room_amount: true
+  field_room_type: true
   field_station: true
   field_status: true
   field_thumbnail: true

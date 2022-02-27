@@ -46,6 +46,7 @@ search:
     theme:
       css/search.css: {}
       libraries/select2/select2.min.css: {}
+      css/select2-custom.css: {}
   js:
     js/search.js: {}
     libraries/select2/select2.min.js: {}
@@ -54,8 +55,16 @@ select2:
   css:
     theme:
       libraries/select2/select2.min.css: {}
+      css/select2-custom.css: {}
   js:
     libraries/select2/select2.min.js: {}
+
+autocomplete:
+  css:
+    theme:
+      libraries/autocomplete/autoComplete.min.css: {}
+  js:
+    libraries/autocomplete/autoComplete.min.js: {}
 
 front:
   css:

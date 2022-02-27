@@ -31,7 +31,8 @@
                         title: $(this).attr('price'),
                         icon: drupalSettings.path.baseUrl + 'themes/custom/m2group/images/marker.svg',
                         icon_url: drupalSettings.path.baseUrl + 'themes/custom/m2group/images/marker.svg',
-                        html: $(this).html()
+                        html: $(this).html(),
+                        link: $(this).attr('url')
                     });
                 });
                 if (marker_arr.length > 0) {
@@ -74,6 +75,9 @@
         if (options['html'] != null) {
             obj['_html'] = options['html'];
         }
+        if (options['link'] != null) {
+            obj['link'] = options['link'];
+        }
         if (title != null) {
             obj['title'] = title;
         }
@@ -93,6 +97,9 @@
             infowindow.open(map, marker); // Open the marker as default
 
             marker.addListener('click', function(event) {
+                window.open($(this)[0].link, '_blank');
+                return false;
+
                 $('#show-info .info').html($(this)[0]._html);
                 $('#show-info').css({
                     'top': event.domEvent.clientY,
@@ -168,7 +175,11 @@
             if (marker_arr[i]['html'] != null) {
                 html = marker_arr[i]['html'];
             }
-            let val = Drupal.search_map.ggmap_make_marker(marker_arr[i]['location'], marker_arr[i]['icon_url'], marker_arr[i]['title'], map, { html: html });
+            let link = null;
+            if (marker_arr[i]['link'] != null) {
+                link = marker_arr[i]['link'];
+            }
+            let val = Drupal.search_map.ggmap_make_marker(marker_arr[i]['location'], marker_arr[i]['icon_url'], marker_arr[i]['title'], map, { html: html, link: link });
             markers.push(val);
         }
 

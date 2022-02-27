@@ -12,6 +12,16 @@
   <div{{ attributes.addClass(classes) }}>
     <div class="box-search-wrapper">
       <span>{{ 'Tìm kiếm theo tên ga'|t }}</span>
+      <div class="flat-type">
+          <div class="item for-rent checked">
+              <input id="for_rent" type="radio" name="flat_type" value="0" checked>
+              <label for="for_rent">{{ 'Thuê'|t }}</label>
+          </div>
+          <div class="item for-sale">
+              <input id="for_sale" type="radio" name="flat_type" value="1">
+              <label for="for_sale">{{ 'Bán'|t }}</label>
+          </div>
+      </div>
       <div class="box-search">
         <div class="input-wrapper">
           <div class="_select">
@@ -23,19 +33,15 @@
             <img src="/themes/custom/m2group/images/search.svg">
           </div>
         </div>
-        <div class="filter-wrapper">
-          <img src="/themes/custom/m2group/images/filter.svg">
-        </div>
-        <div class="flat-type">
-          <div class="flat-type-item flat-type-item-1">
-            <input id="for_rent" type="radio" name="flat_type" value="0">
-            <label for="for_rent">{{ 'Thuê'|t }}</label>
+      </div>
+      <div class="advance-filter">
+          <div class="filter-box">
+              <div class="select-box"></div>
           </div>
-          <div class="flat-type-item flat-type-item-2">
-            <input id="for_sale" type="radio" name="flat_type" value="1">
-            <label for="for_sale">{{ 'Bán'|t }}</label>
+          <div class="filter-btn">
+              <div class="close-state">{{ 'Tìm kiếm nâng cao'|t }}</div>
+              <div class="open-state">{{ 'Ẩn'|t }}</div>
           </div>
-        </div>
       </div>
     </div>
 

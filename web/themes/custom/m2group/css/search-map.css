@@ -1,10 +1,11 @@
 #map {
     width: 100%;
     height: 70vh;
+    height: calc(100vh - 109px);
 }
 
 .gm-style .gm-style-iw-c[role="dialog"] {
-    height: 32px;
+    height: 26px;
     margin-top: 110px;
     padding: 0;
     border-radius: 5px;
@@ -22,7 +23,7 @@
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 20px;
 }
 
