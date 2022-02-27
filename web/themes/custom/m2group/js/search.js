@@ -48,8 +48,15 @@
                 '#edit-district>div>ul>li>div'
             );
         };
-        $('.box-search .filter-wrapper').click(function() {
-            $('.box-search').toggleClass('show_filter');
+        let sBox = $('.advance-filter .filter-box .select-box');
+        sBox.html('');
+        $('[data-drupal-selector="edit-room-type"]').appendTo(sBox);
+        $(".flat-type .item").click(function() {
+            $(this).addClass("checked");
+            $(this).siblings(".item").removeClass("checked");
+        });
+        $(".advance-filter .filter-btn").click(function() {
+            $(".advance-filter").toggleClass("close");
         });
         Drupal.search.initSelect2();
     };
@@ -140,6 +147,7 @@
             if ($('input[name="flat_type"]:checked').length) {
                 arr.push('type=' + $('input[name="flat_type"]:checked').val());
             }
+            arr.push('room_type=' + $('[data-drupal-selector="edit-room-type"]').val());
             if (arr.length !== 0) {
                 station_params += arr.join("&");
             }

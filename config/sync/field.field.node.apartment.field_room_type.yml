@@ -1,0 +1,29 @@
+uuid: a15d562a-a7b6-4059-bf8f-199747043ca6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_type
+    - node.type.apartment
+    - taxonomy.vocabulary.room_type
+id: node.apartment.field_room_type
+field_name: field_room_type
+entity_type: node
+bundle: apartment
+label: 'Kiểu phòng'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      room_type: room_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

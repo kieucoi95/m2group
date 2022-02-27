@@ -1,0 +1,8 @@
+uuid: e519c533-383d-484a-93ec-2c55bc12efe4
+langcode: vi
+status: true
+dependencies: {  }
+name: 'Kiểu phòng'
+vid: room_type
+description: ''
+weight: 0

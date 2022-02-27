@@ -1,0 +1,22 @@
+uuid: 5964dd92-e0da-4086-9a68-4ffe926150c4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_type
+  module:
+    - text
+id: taxonomy_term.room_type.default
+targetEntityType: taxonomy_term
+bundle: room_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

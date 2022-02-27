@@ -48,27 +48,51 @@
             s.append('<option value="default">' + s.attr('placeholder') + '</option>');
             let stationElemWrappers = $('#edit-station-data>div>ul>li>ul>li>ul>li>div');
             let districtElemWrappers = $('#edit-district-data>div>ul>li>ul>li>div');
-            stationElemWrappers.each(function() {
+            stationElemWrappers.each(function(index) {
                 let val = $(this).find('input').val();
                 let text = $(this).find('label').text();
+                if (index == 0) {
+                    s.append("<optgroup label='Danh sách Ga'>");
+                }
                 s.append('<option value="' + val + '" type="station">' + s.attr('stext') + ' ' + text + '</option>');
+                if (index == (stationElemWrappers.length - 1)) {
+                    s.append("</optgroup>");
+                }
             });
-            districtElemWrappers.each(function() {
+            districtElemWrappers.each(function(index) {
                 let val = $(this).find('input').val();
                 let text = $(this).find('label').text();
+                if (index == 0) {
+                    s.append("<optgroup label='Danh sách Quận'>");
+                }
                 s.append('<option value="' + val + '" type="district">' + s.attr('dtext') + ' ' + text + '</option>');
+                if (index == (districtElemWrappers.length - 1)) {
+                    s.append("</optgroup>");
+                }
             });
+            let sBox = $('.advance-filter .filter-box .select-box');
+            sBox.html('');
+            $('[data-drupal-selector="edit-room-type"]').appendTo(sBox);
         };
         $.when(initSelectOpt()).done(function() {
-            s.select2();
+            s.select2({ theme: "classic" });
             $('.search-btn').click(function(e) {
                 e.preventDefault();
                 if (s.val() != 'default') {
                     let type = s.find('option[value="' + s.val() + '"]').attr('type');
-                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?' + type + '%5B' + s.val() + '%5D=' + s.val();
+                    let flatType = $("[name='flat_type']:checked").val();
+                    let roomType = $("[name='room_type']").val();
+                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?' + type + '%5B' + s.val() + '%5D=' + s.val() + '&type=' + flatType + '&room_type=' + roomType;
                     window.location.href = productPageUrl;
                 }
             })
+        });
+        $(".flat-type .item").click(function() {
+            $(this).addClass("checked");
+            $(this).siblings(".item").removeClass("checked");
+        });
+        $(".advance-filter .filter-btn").click(function() {
+            $(".advance-filter").toggleClass("close");
         });
     };
     searchHandler();

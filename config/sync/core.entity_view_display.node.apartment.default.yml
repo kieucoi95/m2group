@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_price_text
     - field.field.node.apartment.field_room_amount
+    - field.field.node.apartment.field_room_type
     - field.field.node.apartment.field_station
     - field.field.node.apartment.field_status
     - field.field.node.apartment.field_thumbnail
@@ -133,6 +134,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_room_type:
+    weight: 122
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_station:
     weight: 102

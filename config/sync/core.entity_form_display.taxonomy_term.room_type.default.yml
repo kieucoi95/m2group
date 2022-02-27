@@ -1,0 +1,31 @@
+uuid: 07a74fb1-a94f-4c51-b227-aa220214d5cb
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_type
+id: taxonomy_term.room_type.default
+targetEntityType: taxonomy_term
+bundle: room_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  translation: true

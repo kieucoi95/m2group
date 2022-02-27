@@ -2,6 +2,8 @@
 
 .home_banner .banner {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .home_banner .banner .img img {
@@ -10,7 +12,6 @@
 
 .home_banner .banner .inner {
     position: absolute;
-    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 30px);
@@ -20,10 +21,13 @@
 .home_banner .hepl-text {
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 20px;
     color: #FFFFFF;
-    margin-bottom: 15px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    width: max-content;
 }
 
 .home_banner form {
