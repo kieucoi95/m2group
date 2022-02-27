@@ -76,7 +76,6 @@
         };
         $.when(initSelectOpt()).done(function() {
             function formatState(state) {
-                console.log(state);
                 let type = $('option[value="' + state.id + '"]').attr("type");
                 if (type == 'station') {
                     var $state = $('<span>' + state.text + '<span class="s2-type">Ga</span></span>');
@@ -86,18 +85,17 @@
                     var $state = state.text;
                 }
                 return $state;
-                // if (!state.id) {
-                //     return state.text;
-                // }
-                // var baseUrl = "/user/pages/images/flags";
-                // var $state = $(
-                //     '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
-                // );
-                // return $state;
             };
+            var sparent = s.parents("form");
             s.select2({
                 theme: "classic",
-                templateResult: formatState
+                templateResult: formatState,
+                dropdownPosition: 'below',
+                dropdownParent: sparent,
+            }).on('select2:open', function(e) {
+                sparent.find('.select2-dropdown').addClass('animate__animated animate__bounce');
+            }).on('select2:closing', function(e) {
+                sparent.find('.select2-dropdown').removeClass('animate__animated animate__bounce');
             });
             $('.search-btn').click(function(e) {
                 e.preventDefault();
