@@ -172,7 +172,12 @@
             });
         };
         $.when(initSelectOpt()).done(function() {
-            $('#_select').select2();
+            var sparent = $('#_select').parents(".box-search");
+            $('#_select').select2({
+                theme: "classic",
+                dropdownPosition: 'below',
+                dropdownParent: sparent,
+            });
         });
     };
 })(jQuery, Drupal);

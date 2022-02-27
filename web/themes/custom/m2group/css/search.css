@@ -295,6 +295,10 @@ div.flat-type .item.checked label {
     color: #ffffff;
 }
 
+.box-search .select2-container input {
+    height: 60px;
+}
+
 #edit-station>div>ul>li>ul>li>ul>li.col-6,
 #edit-district>div>ul>li>ul>li.col-6 {
     margin-bottom: 30px;
