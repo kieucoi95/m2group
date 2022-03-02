@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.apartment.field_gallery
     - field.field.node.apartment.field_latitude
     - field.field.node.apartment.field_longtitude
+    - field.field.node.apartment.field_map
     - field.field.node.apartment.field_nearest_station
     - field.field.node.apartment.field_notes
     - field.field.node.apartment.field_price
@@ -26,6 +27,7 @@ dependencies:
     - node.type.apartment
   module:
     - field_group
+    - google_map_field
     - image
     - path
     - text
@@ -124,8 +126,7 @@ third_party_settings:
       label: 'Khối mô tả chi tiết'
     group_map:
       children:
-        - field_longtitude
-        - field_latitude
+        - field_map
       parent_name: group_info_apartment
       weight: 15
       format_type: tab
@@ -155,7 +156,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -197,21 +198,11 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_latitude:
-    weight: 46
-    settings:
-      size: 60
-      placeholder: ''
+  field_map:
+    weight: 47
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_longtitude:
-    weight: 45
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: google_map_field_default
     region: content
   field_nearest_station:
     weight: 49
@@ -263,7 +254,7 @@ content:
     type: options_select
     region: content
   field_status:
-    weight: 42
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -294,14 +285,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -309,21 +300,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -335,13 +326,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -349,4 +340,6 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_latitude: true
+  field_longtitude: true

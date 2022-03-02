@@ -52,10 +52,11 @@
       {% set data = view.result %}
       {% for row in data %}
         {% set e = row._entity %}
+        {% set mapData = e.field_map.value[0] %}
         <div
           class="item"
-          lat="{{ e.field_latitude.value }}"
-          lon="{{ e.field_longtitude.value }}"
+          lat="{{ mapData['lat'] }}"
+          lon="{{ mapData['lon'] }}"
           price="{{ '¥ ' ~ e.field_price.value|number_format(0, '.', ',') }}"
           url="{{ path('entity.node.canonical', {'node': e.nid.value}) }}"
         >
