@@ -51,45 +51,45 @@
             stationElemWrappers.each(function(index) {
                 let val = $(this).find('input').val();
                 let text = $(this).find('label').text();
-                // if (index == 0) {
-                //     s.append("<optgroup label='Danh sách Ga'>");
-                // }
+                if (index == 0) {
+                    s.append("<optgroup label='Danh sách Ga'>");
+                }
                 s.append('<option value="' + val + '" type="station">' + s.attr('stext') + ' ' + text + '</option>');
-                // if (index == (stationElemWrappers.length - 1)) {
-                //     s.append("</optgroup>");
-                // }
+                if (index == (stationElemWrappers.length - 1)) {
+                    s.append("</optgroup>");
+                }
             });
             districtElemWrappers.each(function(index) {
                 let val = $(this).find('input').val();
                 let text = $(this).find('label').text();
-                // if (index == 0) {
-                //     s.append("<optgroup label='Danh sách Quận'>");
-                // }
+                if (index == 0) {
+                    s.append("<optgroup label='Danh sách Quận'>");
+                }
                 s.append('<option value="' + val + '" type="district">' + s.attr('dtext') + ' ' + text + '</option>');
-                // if (index == (districtElemWrappers.length - 1)) {
-                //     s.append("</optgroup>");
-                // }
+                if (index == (districtElemWrappers.length - 1)) {
+                    s.append("</optgroup>");
+                }
             });
             let sBox = $('.advance-filter .filter-box .select-box');
             sBox.html('');
             $('[data-drupal-selector="edit-room-type"]').appendTo(sBox);
         };
         $.when(initSelectOpt()).done(function() {
-            function formatState(state) {
-                let type = $('option[value="' + state.id + '"]').attr("type");
-                if (type == 'station') {
-                    var $state = $('<span>' + state.text + '<span class="s2-type">Ga</span></span>');
-                } else if (type == 'district') {
-                    var $state = $('<span>' + state.text + '<span class="s2-type">Quận</span></span>');
-                } else {
-                    var $state = state.text;
-                }
-                return $state;
-            };
+            // function formatState(state) {
+            //     let type = $('option[value="' + state.id + '"]').attr("type");
+            //     if (type == 'station') {
+            //         var $state = $('<span>' + state.text + '<span class="s2-type">Ga</span></span>');
+            //     } else if (type == 'district') {
+            //         var $state = $('<span>' + state.text + '<span class="s2-type">Quận</span></span>');
+            //     } else {
+            //         var $state = state.text;
+            //     }
+            //     return $state;
+            // };
             var sparent = s.parents("form");
             s.select2({
                 theme: "classic",
-                templateResult: formatState,
+                // templateResult: formatState,
                 dropdownPosition: 'below',
                 dropdownParent: sparent,
             }).on('select2:open', function(e) {

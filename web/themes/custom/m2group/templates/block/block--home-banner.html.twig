@@ -13,11 +13,11 @@
             <div class="flat-type">
                 <div class="item for-rent checked">
                     <input id="for_rent" type="radio" name="flat_type" value="0" checked>
-                    <label for="for_rent">{{ 'Thuê'|t }}</label>
+                    <label for="for_rent">{{ 'Cho thuê'|t }}</label>
                 </div>
                 <div class="item for-sale">
                     <input id="for_sale" type="radio" name="flat_type" value="1">
-                    <label for="for_sale">{{ 'Bán'|t }}</label>
+                    <label for="for_sale">{{ 'Mua bán'|t }}</label>
                 </div>
             </div>
             <form>
@@ -25,7 +25,10 @@
                     <select name="district_station" type="text" placeholder="{{ 'Tên ga, tên quận' | t }}" stext="{{ 'Ga'|t }}" dtext="{{ 'Quận'|t }}"></select>
                 </div>
                 <div class="form-submit">
-                    <button type="submit" class="search-btn"><img src="/themes/custom/m2group/images/search.svg" alt="search"></button>
+                    <button type="submit" class="search-btn">
+                        <span class="text">{{ 'Tìm kiếm'|t }}</span>
+                        <img src="/themes/custom/m2group/images/search.svg" alt="search">
+                    </button>
                 </div>
             </form>
             <div class="advance-filter">
