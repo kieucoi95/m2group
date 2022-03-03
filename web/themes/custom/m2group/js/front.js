@@ -92,10 +92,6 @@
                 // templateResult: formatState,
                 dropdownPosition: 'below',
                 dropdownParent: sparent,
-            }).on('select2:open', function(e) {
-                sparent.find('.select2-dropdown').addClass('animate__animated animate__bounce');
-            }).on('select2:closing', function(e) {
-                sparent.find('.select2-dropdown').removeClass('animate__animated animate__bounce');
             });
             $('.search-btn').click(function(e) {
                 e.preventDefault();
