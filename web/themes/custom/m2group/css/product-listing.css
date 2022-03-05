@@ -178,7 +178,7 @@ ul.pager__items>li.is-active>a {
 [data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul>li>div,
 [data-drupal-selector="edit-station"] .fieldset-wrapper .form-checkboxes>ul>li>ul>li>div,
 [data-drupal-selector="edit-district"] .fieldset-wrapper .form-checkboxes>ul>li>div {
-    display: none;
+    /* display: none; */
 }
 
 [data-drupal-selector="edit-station"] label.option,
