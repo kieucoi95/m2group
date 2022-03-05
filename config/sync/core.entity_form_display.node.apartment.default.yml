@@ -199,7 +199,7 @@ content:
     type: image_image
     region: content
   field_map:
-    weight: 47
+    weight: 53
     settings: {  }
     third_party_settings: {  }
     type: google_map_field_default

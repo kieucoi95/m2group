@@ -37,8 +37,10 @@ function m2group_preprocess_html(array &$variables) {
 function m2group_page_attachments_alter(array &$page) {
   $config = \Drupal::config('m2group_custom.settings');
   $product_url = $config->get('product_page_url');
+  $station_lv4_url = $config->get('station_lv4_page_url');
   $page['#attached']['drupalSettings']['m2group'] = [
-      'product_url' => $product_url
+      'product_url' => $product_url,
+      'station_lv4_url' => $station_lv4_url
   ];
 }
 
@@ -187,7 +189,7 @@ function m2group_preprocess_block(&$variables) {
         }
       }
     }
-    
+
     if ($blockType === 'home_utilities') {
       $variables['items'] = [];
       foreach ($content['field_utilities'] as $key => $value) {
@@ -198,7 +200,7 @@ function m2group_preprocess_block(&$variables) {
           if (!empty($value['#paragraph']->field_title->getValue())) {
             $title = $value['#paragraph']->field_title->getValue()[0]['value'];
           }
-          
+
           if (!empty($value['#paragraph']->field_description->getValue())) {
             $description = $value['#paragraph']->field_description->getValue()[0]['value'];
           }

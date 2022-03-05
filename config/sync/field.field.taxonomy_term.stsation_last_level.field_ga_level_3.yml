@@ -1,0 +1,25 @@
+uuid: e5147995-8e0c-4fa6-80da-3864cfee21d4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ga_level_3
+    - taxonomy.vocabulary.stsation_last_level
+id: taxonomy_term.stsation_last_level.field_ga_level_3
+field_name: field_ga_level_3
+entity_type: taxonomy_term
+bundle: stsation_last_level
+label: 'Ga (Level 3)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: referenced_views_taxonomy
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

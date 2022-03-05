@@ -7,4 +7,4 @@ _core:
 name: Thẻ
 vid: tags
 description: 'Sử dụng thẻ để nhóm các bài viết về các chủ đề tương tự thành các thể loại.'
-weight: -5
+weight: -6

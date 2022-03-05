@@ -105,3 +105,10 @@ about:
       css/about.css: {}
   js:
     js/about.js: {}
+
+train-line:
+  css:
+    theme:
+      css/train-line.css: {}
+  js:
+    js/train-line.js: {}

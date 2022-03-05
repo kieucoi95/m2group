@@ -1,0 +1,14 @@
+uuid: b4985464-8e73-4300-b6d0-cd13e06f1cb8
+langcode: vi
+status: true
+dependencies:
+  config:
+    - user.role.nhan_vien
+  module:
+    - user
+id: user_add_role_action.nhan_vien
+label: 'Add the Nhân Viên role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: nhan_vien

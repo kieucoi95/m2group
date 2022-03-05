@@ -1,0 +1,40 @@
+uuid: ed843377-42c9-4165-bd7c-26b0ba03a9e0
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.stsation_last_level.field_ga_level_3
+    - field.field.taxonomy_term.stsation_last_level.field_metatags
+    - taxonomy.vocabulary.stsation_last_level
+  module:
+    - metatag
+    - text
+id: taxonomy_term.stsation_last_level.default
+targetEntityType: taxonomy_term
+bundle: stsation_last_level
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ga_level_3:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_metatags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+hidden:
+  langcode: true

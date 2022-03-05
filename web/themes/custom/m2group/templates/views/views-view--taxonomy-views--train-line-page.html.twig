@@ -1,0 +1,50 @@
+{{ attach_library('m2group/search') }}
+{{ attach_library('m2group/train-line') }}
+
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'container',
+    'train-line-page'
+  ]
+%}
+<div class="train-line-page-wrapper">
+  <div{{ attributes.addClass(classes) }}>
+    <div class="big-wrapper">
+      <div class="title-wrapper">
+        <h1 class="title">{{ 'Tìm kiếm theo Ga'|t }}</h1>
+        <a href="/search/station">{{ 'Về lại trang tìm kiếm'|t }}</a>
+      </div>
+
+      <ul class="big-ul">
+        {% set data = view.result %}
+        {% for row in data %}
+          {% set t = term(row.tid) %}
+          <li class="big-li">
+            <div class="item-wrapper station-item">
+              <input type="checkbox" id="edit-station-{{ row.tid }}" class="edit-station" name="station[{{ row.tid }}]" value="{{ row.tid }}">
+              <label for="edit-station-{{ row.tid }}">{{ t.name() }}</label>
+            </div>
+
+            {% set items = drupal_view_result('taxonomy_views', 'station_lv4', row.tid) %}
+            <ul class="row sm-ul">
+              {% for item in items %}
+                {% set t2 = term(item.tid) %}
+                <li class="sm-li col-md-3 col-6">
+                  <div class="item-wrapper train-line-item">
+                    <input type="checkbox" id="edit-train-line-{{ item.tid }}" class="edit-train-line" name="trainline[{{ item.tid }}]" value="{{ item.tid }}">
+                    <label for="edit-train-line-{{ item.tid }}">{{ t2.name() }}</label>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="actions">
+        <button class="train-line-action">{{ 'Tìm kiếm'|t }}</button>
+      </div>
+    </div>
+  </div>
+</div>

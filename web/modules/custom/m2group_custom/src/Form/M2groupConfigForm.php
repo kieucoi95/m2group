@@ -49,6 +49,12 @@ class M2groupConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('product_page_url'),
     );
 
+    $form['station_lv4_page_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Đường dẫn trang ga level 4'),
+      '#default_value' => $config->get('station_lv4_page_url'),
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -59,6 +65,7 @@ class M2groupConfigForm extends ConfigFormBase {
     $values = $form_state->getValues();
     $this->config('m2group_custom.settings')
       ->set('product_page_url', trim($values['product_page_url']))
+      ->set('station_lv4_page_url', trim($values['station_lv4_page_url']))
       ->save();
 
     parent::submitForm($form, $form_state);

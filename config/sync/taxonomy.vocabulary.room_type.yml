@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Kiểu phòng'
 vid: room_type
 description: ''
-weight: 0
+weight: -5

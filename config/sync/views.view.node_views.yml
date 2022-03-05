@@ -1147,32 +1147,33 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        field_type_value:
+          id: field_type_value
+          table: node__field_type
+          field: field_type_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            apartment: apartment
+          operator: or
+          value: {  }
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: field_type_value_op
+            label: 'Loại hình'
             description: ''
             use_operator: false
-            operator: ''
+            operator: field_type_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: type
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1186,9 +1187,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+          reduce_duplicates: true
+          plugin_id: list_field
         field_station_target_id:
           id: field_station_target_id
           table: node__field_station
@@ -1236,48 +1236,6 @@ display:
           hierarchy: true
           error_message: false
           plugin_id: taxonomy_index_tid
-        field_type_value:
-          id: field_type_value
-          table: node__field_type
-          field: field_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_type_value_op
-            label: 'Loại hình'
-            description: ''
-            use_operator: false
-            operator: field_type_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          plugin_id: list_field
         field_district_target_id:
           id: field_district_target_id
           table: node__field_district
@@ -1325,37 +1283,33 @@ display:
           hierarchy: true
           error_message: false
           plugin_id: taxonomy_index_tid
-        field_room_amount_value:
-          id: field_room_amount_value
-          table: node__field_room_amount
-          field: field_room_amount_value
+        type:
+          id: type
+          table: node_field_data
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: in
+          value:
+            apartment: apartment
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_room_amount_value_op
-            label: 'Số lượng phòng'
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_room_amount_value_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: room_amount
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: 0
-            min_placeholder: null
-            max_placeholder: null
-            placeholder: null
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -1368,8 +1322,9 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: 1
-          plugin_id: numeric
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
         field_room_type_target_id:
           id: field_room_type_target_id
           table: node__field_room_type

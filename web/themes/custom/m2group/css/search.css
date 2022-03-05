@@ -313,6 +313,10 @@ div.flat-type .item::before {
     height: 50px;
 }
 
+#edit-station>div>ul>li>ul>li>ul>li ul {
+    display: none;
+}
+
 #edit-station>div>ul>li>ul>li>ul>li.col-6,
 #edit-district>div>ul>li>ul>li.col-6 {
     margin-bottom: 30px;

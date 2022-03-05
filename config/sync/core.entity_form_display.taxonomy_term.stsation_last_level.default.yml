@@ -1,0 +1,59 @@
+uuid: 6b4ca7d4-312e-461f-ad94-3c96bddfde1e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.stsation_last_level.field_ga_level_3
+    - field.field.taxonomy_term.stsation_last_level.field_metatags
+    - taxonomy.vocabulary.stsation_last_level
+  module:
+    - metatag
+    - path
+id: taxonomy_term.stsation_last_level.default
+targetEntityType: taxonomy_term
+bundle: stsation_last_level
+mode: default
+content:
+  field_ga_level_3:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_metatags:
+    weight: 1
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

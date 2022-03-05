@@ -1,0 +1,14 @@
+uuid: 000fd430-b703-4ce6-9c60-cae7ac01f94d
+langcode: vi
+status: true
+dependencies:
+  config:
+    - user.role.nhan_vien
+  module:
+    - user
+id: user_remove_role_action.nhan_vien
+label: 'Remove the Nhân Viên role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: nhan_vien

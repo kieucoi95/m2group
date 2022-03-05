@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Tiện ích căn hộ'
 vid: apartment_utility
 description: ''
-weight: -6
+weight: -7

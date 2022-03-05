@@ -18,13 +18,22 @@
         if ($('#edit-station').length) {
             // Create title
             $('#edit-station>div>ul>li>div>label').each(function() {
-                let pDiv = $(this).parent();
-                pDiv.before('<h3 class="station-title">' + $(this).text() + '</h3>');
+                if ($(this).parent().next().length) {
+                    let pDiv = $(this).parent();
+                    pDiv.before('<h3 class="station-title">' + $(this).text() + '</h3>');
+                } else {
+                    $(this).parent().parent().hide();
+                }
             });
             // Add bootstrap classes
-            $('#edit-station>div>ul>li>ul>li>ul>li').each(function() {
-                $(this).addClass('col-md-3 col-6');
-                $(this).parent().addClass('row');
+            $('#edit-station>div>ul>li>ul>li').each(function() {
+                if ($(this).find('>ul').length) {
+                    let $this = $(this).find('>ul>li');
+                    $this.addClass('col-md-3 col-6');
+                    $this.parent().addClass('row');
+                } else {
+                    $(this).hide();
+                }
             });
             // Search handler
             Drupal.search.handler(
@@ -122,17 +131,32 @@
         // Click search btn
         $('.form-actions input').click(function(e) {
             e.preventDefault();
-            let smallCheckbox = $(smallCheckboxQuery + ':checked');
-            let station_params = '?';
-            if (smallCheckbox.length > 0) {
-                station_arr = [];
-                smallCheckbox.each(function() {
-                    let val = $(this).val();
-                    station_arr.push(paramText + '%5B' + val + '%5D=' + val);
-                })
-                station_params += station_arr.join("&");
-                let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + station_params;
-                window.location.href = productPageUrl;
+            if (paramText == 'district') {
+                let smallCheckbox = $(smallCheckboxQuery + ':checked');
+                let station_params = '?';
+                if (smallCheckbox.length > 0) {
+                    station_arr = [];
+                    smallCheckbox.each(function() {
+                        let val = $(this).val();
+                        station_arr.push(paramText + '%5B' + val + '%5D=' + val);
+                    })
+                    station_params += station_arr.join("&");
+                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + station_params;
+                    window.location.href = productPageUrl;
+                }
+            } else {
+                let smallCheckbox = $(smallCheckboxQuery + ':checked');
+                let station_params = '/';
+                if (smallCheckbox.length > 0) {
+                    station_arr = [];
+                    smallCheckbox.each(function() {
+                        let val = $(this).val();
+                        station_arr.push(val);
+                    })
+                    station_params += station_arr.join("%2B");
+                    let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.station_lv4_url + station_params;
+                    window.location.href = productPageUrl;
+                }
             }
         });
         // Click search btn on search box
@@ -161,14 +185,6 @@
     Drupal.search.initSelect2 = function() {
         let nonAccentVietnamese = function(str) {
             str = str.toLowerCase();
-            //     We can also use this instead of from line 11 to line 17
-            //     str = str.replace(/\u00E0|\u00E1|\u1EA1|\u1EA3|\u00E3|\u00E2|\u1EA7|\u1EA5|\u1EAD|\u1EA9|\u1EAB|\u0103|\u1EB1|\u1EAF|\u1EB7|\u1EB3|\u1EB5/g, "a");
-            //     str = str.replace(/\u00E8|\u00E9|\u1EB9|\u1EBB|\u1EBD|\u00EA|\u1EC1|\u1EBF|\u1EC7|\u1EC3|\u1EC5/g, "e");
-            //     str = str.replace(/\u00EC|\u00ED|\u1ECB|\u1EC9|\u0129/g, "i");
-            //     str = str.replace(/\u00F2|\u00F3|\u1ECD|\u1ECF|\u00F5|\u00F4|\u1ED3|\u1ED1|\u1ED9|\u1ED5|\u1ED7|\u01A1|\u1EDD|\u1EDB|\u1EE3|\u1EDF|\u1EE1/g, "o");
-            //     str = str.replace(/\u00F9|\u00FA|\u1EE5|\u1EE7|\u0169|\u01B0|\u1EEB|\u1EE9|\u1EF1|\u1EED|\u1EEF/g, "u");
-            //     str = str.replace(/\u1EF3|\u00FD|\u1EF5|\u1EF7|\u1EF9/g, "y");
-            //     str = str.replace(/\u0111/g, "d");
             str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
             str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
             str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");

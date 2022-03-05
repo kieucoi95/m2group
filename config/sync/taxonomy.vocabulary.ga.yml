@@ -2,7 +2,7 @@ uuid: a6245272-75ee-43c3-a31b-328e5ad105c0
 langcode: vi
 status: true
 dependencies: {  }
-name: Ga
+name: 'Ga (Level 1, 2, 3)'
 vid: ga
 description: 'Tìm kiếm theo Ga'
-weight: -8
+weight: -10

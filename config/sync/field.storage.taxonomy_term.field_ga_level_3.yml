@@ -1,0 +1,19 @@
+uuid: 10590612-d379-443f-8fb9-a7b315d8ef05
+langcode: vi
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_ga_level_3
+field_name: field_ga_level_3
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

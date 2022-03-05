@@ -1,0 +1,11 @@
+uuid: dc702a20-6c79-4697-911b-ea8b28e8f8f5
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stsation_last_level
+id: taxonomy_term.stsation_last_level
+target_entity_type_id: taxonomy_term
+target_bundle: stsation_last_level
+default_langcode: site_default
+language_alterable: false

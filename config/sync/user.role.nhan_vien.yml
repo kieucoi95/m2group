@@ -1,0 +1,17 @@
+uuid: 6b8d8b0d-0f19-4d97-b405-4998b4eed9a3
+langcode: vi
+status: true
+dependencies: {  }
+id: nhan_vien
+label: 'Nhân Viên'
+weight: 3
+is_admin: null
+permissions:
+  - 'create apartment content'
+  - 'create article content'
+  - 'create page content'
+  - 'delete own apartment content'
+  - 'delete own article content'
+  - 'delete own page content'
+  - 'edit own apartment content'
+  - 'view the administration theme'
