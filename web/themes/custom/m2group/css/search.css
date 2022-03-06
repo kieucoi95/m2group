@@ -164,6 +164,12 @@
     font-size: 14px;
     line-height: 18px;
     color: #000000;
+    transition: 0.3s;
+}
+
+#edit-station>div>ul>li>ul>li>ul label:hover {
+    cursor: pointer;
+    color: var(--red-color);
 }
 
 .search-page [data-drupal-selector="edit-actions"] {

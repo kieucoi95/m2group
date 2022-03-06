@@ -142,7 +142,13 @@ ul.sm-ul>li>div>label {
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
+    cursor: pointer;
     color: #000000;
+    transition: 0.3s;
+}
+
+ul.sm-ul>li>div>label:hover {
+    color: var(--red-color);
 }
 
 .actions {

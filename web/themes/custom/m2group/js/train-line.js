@@ -27,7 +27,8 @@
             paramText = 'district';
         }
         // Click to label
-        $('li.sm-li>div>label').click(function() {
+        $('li.sm-li>div>label').click(function(e) {
+            e.preventDefault();
             let val = $(this).siblings('input').val();
             let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?station%5B' + val + '%5D=' + val;
             window.location.href = productPageUrl;

@@ -36,7 +36,8 @@
                 }
             });
             // Add link to label - Station only
-            $('#edit-station>div>ul>li>ul>li>ul>li>div>label').click(function() {
+            $('#edit-station>div>ul>li>ul>li>ul>li>div>label').click(function(e) {
+                e.preventDefault();
                 let val = $(this).siblings('input').val();
                 let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.station_lv4_url + '/' + val;
                 window.location.href = productPageUrl;
