@@ -211,6 +211,10 @@ ul.pager__items>li.is-active>a {
     margin-left: 15px;
 }
 
+.exposed-block form>div:nth-child(1) {
+    margin-left: 0;
+}
+
 .exposed-block fieldset,
 .exposed-block select,
 .exposed-block .form-actions>input {
@@ -221,11 +225,19 @@ ul.pager__items>li.is-active>a {
     text-align: center;
 }
 
+.exposed-block select {
+    text-align: left;
+}
+
 .exposed-block fieldset legend {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+#edit-district>div>ul>li>div {
+    display: none;
 }
 
 @media (max-width: 480px) {

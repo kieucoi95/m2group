@@ -47,5 +47,13 @@
     </div>
 
     {{ exposed }}
+
+    <div class="station_lv4_data" style="display:none">
+      {% set data = drupal_view_result('taxonomy_views', 'station_lv4') %}
+      {% for item in data %}
+        {% set t = term(item.tid) %}
+        <div class="item" value="{{ item.tid }}">{{ t.name() }}</div>
+      {% endfor %}
+    </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.district
     - taxonomy.vocabulary.ga
     - taxonomy.vocabulary.room_type
+    - taxonomy.vocabulary.stsation_last_level
   module:
     - better_exposed_filters
     - node
@@ -1232,7 +1233,7 @@ display:
           reduce_duplicates: true
           type: select
           limit: true
-          vid: ga
+          vid: stsation_last_level
           hierarchy: true
           error_message: false
           plugin_id: taxonomy_index_tid

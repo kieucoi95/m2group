@@ -35,6 +35,12 @@
                     $(this).hide();
                 }
             });
+            // Add link to label - Station only
+            $('#edit-station>div>ul>li>ul>li>ul>li>div>label').click(function() {
+                let val = $(this).siblings('input').val();
+                let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.station_lv4_url + '/' + val;
+                window.location.href = productPageUrl;
+            });
             // Search handler
             Drupal.search.handler(
                 '#edit-station input[type="checkbox"]',
@@ -198,9 +204,9 @@
             return str;
         }
         let initSelectOpt = function() {
-            $('#edit-station>div>ul>li>ul>li>ul>li>div').each(function() {
-                let val = $(this).find('input').val();
-                let text = $(this).find('label').text();
+            $('.station_lv4_data .item').each(function() {
+                let val = $(this).attr('value');
+                let text = $(this).text();
                 $('#_select').append('<option value="' + val + '">' + text + '</option>');
             });
             $('#edit-district>div>ul>li>ul>li>div').each(function() {

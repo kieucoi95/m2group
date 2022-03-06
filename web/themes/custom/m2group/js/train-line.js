@@ -26,7 +26,12 @@
         if ($('.district-search').length) {
             paramText = 'district';
         }
-
+        // Click to label
+        $('li.sm-li>div>label').click(function() {
+            let val = $(this).siblings('input').val();
+            let productPageUrl = drupalSettings.path.baseUrl + drupalSettings.m2group.product_url + '?station%5B' + val + '%5D=' + val;
+            window.location.href = productPageUrl;
+        });
         titleBar.click(function(e) {
             if (e.target === this) {
                 let li = $(this).parent();
@@ -54,7 +59,7 @@
                     sibs_li.find('>ul').slideUp(300);
                 }
             }
-        })
+        });
         allCheckbox.change(function() {
             if ($(this).prop('checked')) {
                 $(this).addClass('check');
